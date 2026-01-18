@@ -2,6 +2,7 @@ import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
 import aspectIcon from '@tailwindcss/aspect-ratio';
 
+/** @type {import('tailwindcss').Config} */
 export default {
     content: [
         "./index.html",
