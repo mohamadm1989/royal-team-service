@@ -1,10 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-slate-bg: #1e293b;
+  --color-safety-yellow: #facc15;
+  --color-safety-yellow-dark: #eab308;
+
+  --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-display: "Roboto", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
 
 @layer base {
   body {
-    @apply bg-slate-bg text-white font-sans overflow-x-hidden;
+    background-color: var(--color-slate-bg);
+    color: white;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
   }
 }
 
@@ -24,7 +36,7 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: #facc15 !important;
+  border-color: var(--color-safety-yellow) !important;
   box-shadow: 0 0 0 4px rgba(250, 204, 21, 0.1) !important;
   transform: translateY(-1px);
 }
@@ -49,5 +61,5 @@ textarea:focus {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #facc15;
+  background: var(--color-safety-yellow);
 }
