@@ -13,15 +13,14 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
           <div className="space-y-6">
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-3 cursor-pointer" onClick={() => onNavClick()}>
-                <div className="w-16 h-16 flex items-center justify-center overflow-hidden">
-                  <img src="/logo.png?v=final" alt="ROYAL SERVICE Logo" className="w-full h-full object-contain" />
+                <div className="bg-safety-yellow p-1 rounded">
+                  <svg className="w-6 h-6 text-slate-900" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+                  </svg>
                 </div>
-                <div>
-                  <h4 className="text-lg font-black uppercase tracking-tighter text-white leading-none">ROYAL SERVICE</h4>
-                  <p className="text-[10px] text-safety-yellow font-bold tracking-widest uppercase mt-1">Bauen & Rückbau</p>
-                </div>
+                <span className="text-lg font-black uppercase tracking-tighter text-white">ROYAL SERVICE</span>
               </div>
-              <p className="text-slate-500 text-sm leading-relaxed max-w-xs">
+              <p className="text-slate-500 text-sm leading-relaxed">
                 Ihr kompetenter Partner für Bau- und Industriedienstleistungen in Deutschland und ganz Europa.
               </p>
             </div>

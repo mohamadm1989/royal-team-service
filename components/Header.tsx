@@ -23,14 +23,13 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
     <header className="sticky top-0 z-50 w-full bg-slate-bg/95 backdrop-blur-sm border-b border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center gap-3 cursor-pointer group" onClick={() => onNavClick()}>
-            <div className="w-16 h-16 flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105">
-              <img src="/logo.png?v=final" alt="ROYAL SERVICE Logo" className="w-full h-full object-contain" />
+          <div className="flex items-center gap-3 cursor-pointer" onClick={() => onNavClick()}>
+            <div className="bg-safety-yellow p-1.5 rounded shadow-lg">
+              <svg className="w-8 h-8 text-slate-900" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+              </svg>
             </div>
-            <div>
-              <h1 className="text-base md:text-xl font-black uppercase tracking-tight text-white leading-none">ROYAL SERVICE</h1>
-              <p className="text-[10px] text-safety-yellow font-bold tracking-widest uppercase mt-1">Entkernung & Abbruch</p>
-            </div>
+            <span className="text-base md:text-xl font-black uppercase tracking-tight text-white">ROYAL SERVICE</span>
           </div>
 
           {/* Desktop Navigation */}
