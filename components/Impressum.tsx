@@ -22,9 +22,9 @@ const Impressum: React.FC = () => {
                         <div>
                             <h2 className="text-2xl font-bold text-safety-yellow uppercase mb-4">Firmeninformationen</h2>
                             <div className="text-slate-300 space-y-2">
-                                <p className="font-bold text-white">ROYAL SERVICE</p>
+                                <p className="font-bold text-white">ROYAL TEAM SERVICE</p>
                                 <p>Hansenstraße 20</p>
-                                <p>72770 Reutlingen-Ohmenhausen</p>
+                                <p>72770 Reutlingen</p>
                                 <p>Deutschland</p>
                             </div>
                         </div>
@@ -40,7 +40,7 @@ const Impressum: React.FC = () => {
                         <div>
                             <h2 className="text-2xl font-bold text-safety-yellow uppercase mb-4">Vertreten durch</h2>
                             <div className="text-slate-300">
-                                <p>[Geschäftsführer Name]</p>
+                                <p>Ali Alkhalaf</p>
                             </div>
                         </div>
 

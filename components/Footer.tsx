@@ -13,12 +13,11 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
           <div className="space-y-6">
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-3 cursor-pointer" onClick={() => onNavClick()}>
-                <div className="bg-safety-yellow p-1 rounded">
-                  <svg className="w-6 h-6 text-slate-900" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-                <span className="text-lg font-black uppercase tracking-tighter text-white">ROYAL SERVICE</span>
+                <img
+                  src="/logo-transparent-final.png"
+                  alt="Royal Team Service Logo"
+                  className="h-20 w-auto object-contain brightness-125 contrast-115 drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]"
+                />
               </div>
               <p className="text-slate-500 text-sm leading-relaxed">
                 Ihr kompetenter Partner für Bau- und Industriedienstleistungen in Deutschland und ganz Europa.
@@ -30,7 +29,7 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
             <ul className="space-y-4 text-sm text-slate-400">
               <li className="flex items-start gap-3">
                 <span className="material-symbols-outlined text-safety-yellow text-lg">location_on</span>
-                <span>Hansenstraße 20,<br />72770 Ohmenhausen</span>
+                <span>Hansenstraße 20,<br />72770 Reutlingen</span>
               </li>
               <li className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-safety-yellow text-lg">call</span>
@@ -49,15 +48,18 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
           <div>
             <h5 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Leistungen Schnellzugriff</h5>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li><button onClick={() => onNavClick('leistungen')} className="hover:text-safety-yellow transition-colors text-left">Entkernung</button></li>
-              <li><button onClick={() => onNavClick('leistungen')} className="hover:text-safety-yellow transition-colors text-left">Abbruch & Demontage</button></li>
-              <li><button onClick={() => onNavClick('leistungen')} className="hover:text-safety-yellow transition-colors text-left">Schadstoffsanierung (Asbest)</button></li>
-              <li><button onClick={() => onNavClick('leistungen')} className="hover:text-safety-yellow transition-colors text-left">Entsorgungsmanagement</button></li>
+              <li><button onClick={() => onNavClick('leistungen')} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Entkernung</button></li>
+              <li><button onClick={() => onNavClick('leistungen')} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Abbrucharbeiten</button></li>
+              <li><button onClick={() => onNavClick('leistungen')} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Montage und Demontage</button></li>
+              <li><button onClick={() => onNavClick('leistungen')} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Schadstoffsanierung (Asbest)</button></li>
+              <li><button onClick={() => onNavClick('leistungen')} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Entrümpelung</button></li>
+              <li><button onClick={() => onNavClick('leistungen')} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Reinigungsarbeiten</button></li>
+              <li><button onClick={() => onNavClick('leistungen')} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Entsorgungsmanagement</button></li>
             </ul>
           </div>
         </div>
         <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-600 font-medium">
-          <p>© 2026 ROYAL SERVICE. Alle Rechte vorbehalten.</p>
+          <p>© 2026 ROYAL TEAM SERVICE. Alle Rechte vorbehalten.</p>
           <div className="flex gap-6 uppercase">
             <a className="hover:text-safety-yellow cursor-pointer" onClick={() => { window.location.hash = 'impressum'; window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Impressum</a>
             <a className="hover:text-safety-yellow cursor-pointer" onClick={() => { window.location.hash = 'datenschutz'; window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Datenschutz</a>

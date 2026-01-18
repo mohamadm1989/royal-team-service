@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Logo from './Logo';
 
 interface HeaderProps {
   onInquiryClick: () => void;
@@ -39,12 +40,11 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => onNavClick()}>
-            <div className="bg-safety-yellow p-1.5 rounded shadow-lg">
-              <svg className="w-8 h-8 text-slate-900" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
-              </svg>
-            </div>
-            <span className="text-base md:text-xl font-black uppercase tracking-tight text-white">ROYAL SERVICE</span>
+            <img
+              src="/logo-transparent-final.png"
+              alt="Royal Team Service Logo"
+              className="h-24 w-auto object-contain brightness-125 contrast-115 drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]"
+            />
           </div>
 
           {/* Desktop Navigation */}

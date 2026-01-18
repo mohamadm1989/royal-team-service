@@ -24,28 +24,43 @@ const Services: React.FC = () => {
               }
             }
           }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center"
         >
           {[
             {
               icon: "engineering",
-              title: "Entkernung & Demontage",
-              desc: "Vollständiger Rückbau von Decken, Wänden und Bodenbelägen bis auf die statische Grundsubstanz – präzise und effizient."
+              title: "Entkernung",
+              desc: "Systematischer Rückbau von Gebäudeteilen bis auf die statische Grundsubstanz – präzise und fachgerecht."
             },
             {
               icon: "architecture",
               title: "Abbrucharbeiten",
-              desc: "Kontrollierter Abbruch von Dächern, Gebäudeteilen und komplexen Industrieanlagen mit modernstem Equipment."
+              desc: "Professionelle Durchführung von Abbrucharbeiten aller Art, von einzelnen Wänden bis hin zu komplexen Strukturen."
+            },
+            {
+              icon: "construction",
+              title: "Montage und Demontage",
+              desc: "Fachgerechte Montage und Demontage von Bauteilen, Anlagen und Industrie-Komponenten."
             },
             {
               icon: "warning",
-              title: "Schadstoffsanierung",
-              desc: "Fachgerechte Sanierung von Gefahrstoffen wie <span class=\"text-safety-yellow font-bold\">ASBEST</span> nach TRGS 519, 521 und 524."
+              title: "Schadstoffsanierung (Asbest)",
+              desc: "Sicherer Umgang und Sanierung von Gefahrstoffen nach höchsten Sicherheitsstandards (TRGS 519)."
             },
             {
               icon: "delete_sweep",
-              title: "Fachgerechte Entsorgung",
-              desc: "Systematische Trennung und Entsorgung aller Materialien nach ökologischen und gesetzlichen Standards."
+              title: "Entrümpelung",
+              desc: "Vollständige und besenreine Räumung von Objekten, Wohnungen und Industriehallen."
+            },
+            {
+              icon: "cleaning_services",
+              title: "Reinigungsarbeiten",
+              desc: "Gründliche Bau- und Grundreinigung nach Abschluss der Arbeiten für eine perfekte Übergabe."
+            },
+            {
+              icon: "recycling",
+              title: "Entsorgungsmanagement",
+              desc: "Ökologische Trennung und fachgerechte Entsorgung aller anfallenden Materialien nach gesetzlichen Richtlinien."
             }
           ].map((service, index) => (
             <motion.div
@@ -54,13 +69,14 @@ const Services: React.FC = () => {
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
               }}
-              className="bg-slate-800 p-8 rounded border-b-4 border-transparent hover:border-safety-yellow transition-all duration-300 group"
+              className={`bg-safety-yellow p-8 rounded border-b-4 border-slate-900 transition-all duration-300 group shadow-lg ${index === 6 ? 'lg:col-start-2' : ''
+                }`}
             >
-              <div className="w-14 h-14 bg-slate-700 rounded flex items-center justify-center mb-6 group-hover:bg-safety-yellow transition-colors">
-                <span className="material-symbols-outlined text-3xl text-safety-yellow group-hover:text-slate-900">{service.icon}</span>
+              <div className="w-14 h-14 bg-slate-900 rounded flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <span className="material-symbols-outlined text-3xl text-safety-yellow">{service.icon}</span>
               </div>
-              <h4 className="text-xl font-bold mb-3">{service.title}</h4>
-              <p className="text-slate-400 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: service.desc }} />
+              <h4 className="text-xl font-bold mb-3 text-slate-900">{service.title}</h4>
+              <p className="text-slate-800 text-sm leading-relaxed font-medium" dangerouslySetInnerHTML={{ __html: service.desc }} />
             </motion.div>
           ))}
         </motion.div>

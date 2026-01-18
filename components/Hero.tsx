@@ -7,7 +7,7 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
-  const imageUrl = "/hero-bg.png";
+  const imageUrl = "/hero-bg-final.png";
 
   return (
     <section className="relative min-h-[800px] flex items-center overflow-hidden pt-20">
@@ -30,7 +30,7 @@ const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-6 uppercase">
-              ROYAL SERVICE<br />
+              ROYAL TEAM SERVICE<br />
               <span className="text-safety-yellow">Wir schaffen Platz für Ihre Visionen!</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed font-normal">

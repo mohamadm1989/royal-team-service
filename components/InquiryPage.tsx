@@ -186,9 +186,12 @@ const InquiryPage: React.FC = () => {
                         <label className="block text-sm font-semibold text-slate-300 mb-1.5 uppercase tracking-wider group-focus-within:text-safety-yellow transition-colors" htmlFor="service-type">Leistungsart</label>
                         <select className="w-full" id="service-type" name="service-type">
                           <option value="entkernung">Entkernung</option>
-                          <option value="abbruch">Abbruch</option>
-                          <option value="schadstoffe">Schadstoffe</option>
-                          <option value="entsorgung">Entsorgung</option>
+                          <option value="abbruch">Abbrucharbeiten</option>
+                          <option value="montage">Montage und Demontage</option>
+                          <option value="schadstoffe">Schadstoffsanierung (Asbest)</option>
+                          <option value="entruempelung">Entrümpelung</option>
+                          <option value="reinigung">Reinigungsarbeiten</option>
+                          <option value="entsorgung">Entsorgungsmanagement</option>
                         </select>
                       </div>
                       <div className="group">
@@ -267,7 +270,7 @@ const InquiryPage: React.FC = () => {
                       </div>
                       <div>
                         <p className="text-xs font-bold text-slate-500 uppercase mb-1 tracking-widest">Standort</p>
-                        <p className="text-slate-200 text-sm leading-relaxed">Hansenstraße 20,<br />72770 Ohmenhausen</p>
+                        <p className="text-slate-200 text-sm leading-relaxed">Hansenstraße 20,<br />72770 Reutlingen</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4 group cursor-default">

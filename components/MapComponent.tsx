@@ -54,8 +54,8 @@ const MapComponent: React.FC<MapComponentProps> = ({ height = '250px' }) => {
       .addTo(map)
       .bindPopup(`
         <div style="font-family: 'Open Sans', sans-serif; text-align: center;">
-          <strong style="color: #1e293b; font-size: 14px;">ROYAL SERVICE</strong><br/>
-          <span style="color: #64748b; font-size: 12px;">Hansenstraße 20<br/>72770 Ohmenhausen</span>
+          <strong style="color: #1e293b; font-size: 14px;">ROYAL TEAM SERVICE</strong><br/>
+          <span style="color: #64748b; font-size: 12px;">Hansenstraße 20<br/>72770 Reutlingen</span>
         </div>
       `)
       .openPopup();
