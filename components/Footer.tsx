@@ -11,17 +11,20 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           <div className="space-y-6">
-            <div className="flex items-center gap-3 cursor-pointer" onClick={() => onNavClick()}>
-              <div className="bg-safety-yellow p-1 rounded">
-                <svg className="w-6 h-6 text-slate-900" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
-                </svg>
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-3 cursor-pointer" onClick={() => onNavClick()}>
+                <div className="w-12 h-12 bg-safety-yellow rounded-lg flex items-center justify-center p-1 overflow-hidden shadow-lg">
+                  <img src="/logo.png?v=1" alt="ROYAL SERVICE Logo" className="w-full h-full object-contain" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-black uppercase tracking-tighter text-white leading-none">ROYAL SERVICE</h4>
+                  <p className="text-[10px] text-safety-yellow font-bold tracking-widest uppercase mt-1">Bauen & Rückbau</p>
+                </div>
               </div>
-              <span className="text-lg font-black uppercase tracking-tighter text-white">ROYAL SERVICE</span>
+              <p className="text-slate-500 text-sm leading-relaxed max-w-xs">
+                Ihr kompetenter Partner für Bau- und Industriedienstleistungen in Deutschland und ganz Europa.
+              </p>
             </div>
-            <p className="text-slate-500 text-sm leading-relaxed">
-              Ihr kompetenter Partner für Bau- und Industriedienstleistungen in Deutschland und ganz Europa.
-            </p>
           </div>
           <div>
             <h5 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Impressum / Kontakt</h5>
