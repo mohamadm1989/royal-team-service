@@ -1,0 +1,21 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Professional Hexagon -->
+  <path d="M60 5L108 32.5V87.5L60 115L12 87.5V32.5L60 5Z" fill="#FACC15"/>
+  
+  <!-- Subtle Inner Ring -->
+  <circle cx="60" cy="62" r="40" stroke="#1E293B" stroke-width="2" stroke-opacity="0.3"/>
+  
+  <!-- Skyscraper Buildings (Dark Slate) -->
+  <path d="M50 90V45L60 35L70 45V90H50Z" fill="#0F172A"/>
+  <path d="M35 90V60H50V90H35Z" fill="#1E293B"/>
+  <path d="M70 90V55H85V90H70Z" fill="#1E293B"/>
+  
+  <!-- Crown positioned above the buildings -->
+  <path d="M45 28L52.5 18L60 28L67.5 18L75 28V38H45V28Z" fill="#0F172A"/>
+  
+  <!-- Window Details for realism -->
+  <rect x="54" y="55" width="2" height="6" fill="#FACC15" fill-opacity="0.4"/>
+  <rect x="64" y="55" width="2" height="6" fill="#FACC15" fill-opacity="0.4"/>
+  <rect x="54" y="65" width="2" height="6" fill="#FACC15" fill-opacity="0.4"/>
+  <rect x="64" y="65" width="2" height="6" fill="#FACC15" fill-opacity="0.4"/>
+</svg>

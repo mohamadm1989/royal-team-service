@@ -24,8 +24,8 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3 cursor-pointer group" onClick={() => onNavClick()}>
-            <div className="w-12 h-12 bg-safety-yellow rounded-lg flex items-center justify-center p-1 overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300">
-              <img src="/logo.png?v=1" alt="ROYAL SERVICE Logo" className="w-full h-full object-contain" />
+            <div className="w-12 h-12 flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105">
+              <img src="/logo.png?v=3" alt="ROYAL SERVICE Logo" className="w-full h-full object-contain" />
             </div>
             <div>
               <h1 className="text-base md:text-xl font-black uppercase tracking-tight text-white leading-none">ROYAL SERVICE</h1>

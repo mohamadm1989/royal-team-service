@@ -13,8 +13,8 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
           <div className="space-y-6">
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-3 cursor-pointer" onClick={() => onNavClick()}>
-                <div className="w-12 h-12 bg-safety-yellow rounded-lg flex items-center justify-center p-1 overflow-hidden shadow-lg">
-                  <img src="/logo.png?v=1" alt="ROYAL SERVICE Logo" className="w-full h-full object-contain" />
+                <div className="w-12 h-12 flex items-center justify-center overflow-hidden">
+                  <img src="/logo.svg" alt="ROYAL SERVICE Logo" className="w-full h-full object-contain" />
                 </div>
                 <div>
                   <h4 className="text-lg font-black uppercase tracking-tighter text-white leading-none">ROYAL SERVICE</h4>
