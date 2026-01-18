@@ -1,20 +1,76 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🏗️ ROYAL SERVICE - Official Website
 
-# Run and deploy your AI Studio app
+![ROYAL SERVICE Banner](https://royal-service.de/hero-bg.png)
 
-This contains everything you need to run your app locally.
+Professional website for **ROYAL SERVICE**, a leading provider of demolition, gutting, and hazardous material remediation services in Baden-Württemberg, Germany.
 
-View your app in AI Studio: https://ai.studio/apps/drive/13-ZeLGwaJqJ64D9seyf8SyIjf3R5IMu5
+## 🌟 Key Features
 
-## Run Locally
+- **🎯 Advanced SEO**: Optimized meta tags, Open Graph, and JSON-LD structured data for star ratings in Google.
+- **🗺️ Interactive Maps**: Integrated Leaflet.js maps with custom markers for local presence.
+- **📱 Fully Responsive**: Seamless experience across mobile, tablet, and desktop.
+- **⚡ High Performance**: Lazy loading for images and maps, optimized for Core Web Vitals.
+- **📧 Smart Inquiry Form**: Integrated with EmailJS for real-time lead generation and file upload support.
+- **✨ Professional Animations**: Smooth scroll reveals, service card hover effects, and animated statistics.
+- **⚖️ Legal Compliance**: Fully ready with Impressum, Datenschutz (Privacy Policy), and AGB.
 
-**Prerequisites:**  Node.js
+## 🛠️ Technology Stack
 
+- **Frontend**: React.js with TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Maps**: Leaflet.js & OpenStreetMap
+- **Form Handling**: EmailJS
+- **Icons**: Google Material Symbols
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mohamadm1989/royal-team-service.git
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Set up environment variables:
+   Create a `.env.local` file and add your EmailJS keys:
+   ```env
+   VITE_EMAIL_SERVICE_ID=your_id
+   VITE_EMAIL_TEMPLATE_ID=your_id
+   VITE_EMAIL_PUBLIC_KEY=your_key
+   ```
+
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+## 📦 Deployment
+
+This project is optimized for deployment on **Vercel** or **Netlify**.
+
+1. Connect your GitHub repository to Vercel/Netlify.
+2. Add the environment variables to the platform's dashboard.
+3. The build command is `npm run build` and the output directory is `dist`.
+
+---
+
+## 📞 Contact
+
+- **Owner**: ROYAL SERVICE
+- **Address**: Hansenstraße 20, 72770 Reutlingen-Ohmenhausen
+- **Phone**: +49 160 94854768
+- **Email**: royal.team.service25@gmail.com
+
+---
+*Created with ❤️ for ROYAL SERVICE*
