@@ -67,6 +67,15 @@ const Datenschutz: React.FC = () => {
                             </div>
                         </div>
 
+                        <div>
+                            <h2 className="text-2xl font-bold text-safety-yellow uppercase mb-4">5. Lokale Bereitstellung von Schriftarten (Google Fonts)</h2>
+                            <div className="text-slate-300 space-y-4">
+                                <p className="text-sm leading-relaxed">
+                                    Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Web Fonts (Google Fonts). Diese werden jedoch lokal auf unseren Servern gehostet. Eine Verbindung zu Servern von Google wird dabei nicht hergestellt. Damit ist diese Nutzung der Schriftarten DSGVO-konform, da keine IP-Adressen an externe Anbieter übertragen werden.
+                                </p>
+                            </div>
+                        </div>
+
                         <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
                             <p className="text-sm text-slate-400">
                                 <span className="font-semibold text-white">Hinweis:</span> Diese Datenschutzerklärung ist ein Muster. Bitte passen Sie diese an Ihre spezifischen Anforderungen an und konsultieren Sie einen Rechtsanwalt für eine vollständige DSGVO-konforme Datenschutzerklärung.

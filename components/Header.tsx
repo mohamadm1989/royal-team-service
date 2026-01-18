@@ -1,5 +1,6 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 interface HeaderProps {
   onInquiryClick: () => void;
@@ -8,6 +9,15 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleNavClick = (anchor?: string) => {
     setIsMobileMenuOpen(false);
@@ -20,7 +30,12 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-slate-bg/95 backdrop-blur-sm border-b border-slate-700">
+    <header
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${isScrolled
+        ? 'bg-slate-bg/95 backdrop-blur-sm border-b border-slate-700 shadow-lg'
+        : 'bg-transparent border-b border-transparent'
+        }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => onNavClick()}>
@@ -65,13 +80,15 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
           </nav>
 
           <div className="flex items-center gap-4">
-            <button
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               onClick={onInquiryClick}
               className="hidden md:block bg-safety-yellow hover:bg-safety-yellow-dark text-slate-900 px-4 md:px-6 py-2 md:py-2.5 rounded font-bold transition-all shadow-md active:scale-95 text-xs md:text-sm uppercase"
               aria-label="Angebot anfordern - Kontaktformular öffnen"
             >
               Angebot anfordern
-            </button>
+            </motion.button>
 
             {/* Mobile Menu Button */}
             <button

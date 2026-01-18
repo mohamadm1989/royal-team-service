@@ -17,7 +17,7 @@ const InquiryPage: React.FC = () => {
     const fileArray = Array.from(files);
     const maxSize = 10 * 1024 * 1024; // 10MB
 
-    const validFiles = fileArray.filter(file => {
+    const validFiles = fileArray.filter((file: File) => {
       if (file.size > maxSize) {
         setToast({
           message: `Datei "${file.name}" ist zu groß. Maximale Größe: 10MB`,
@@ -57,9 +57,10 @@ const InquiryPage: React.FC = () => {
       };
 
       // Send email using EmailJS
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      // Send email using EmailJS
+      const serviceId = (import.meta as any).env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = (import.meta as any).env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = (import.meta as any).env.VITE_EMAILJS_PUBLIC_KEY;
 
       if (!serviceId || !templateId || !publicKey) {
         throw new Error('EmailJS ist nicht konfiguriert. Bitte Umgebungsvariablen überprüfen.');
@@ -120,7 +121,7 @@ const InquiryPage: React.FC = () => {
         <motion.section
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="bg-slate-900 py-16 border-b border-slate-800 relative overflow-hidden"
+          className="bg-slate-900 pt-32 pb-16 border-b border-slate-800 relative overflow-hidden"
         >
           <div className="absolute top-0 right-0 w-64 h-64 bg-safety-yellow/5 rounded-full blur-3xl -mr-32 -mt-32 animate-pulse-slow"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
