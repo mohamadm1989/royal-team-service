@@ -1,76 +1,54 @@
-# 🏗️ ROYAL SERVICE - Official Website
+# ROYAL SERVICE - Abbruch & Entkernung
 
-![ROYAL SERVICE Banner](https://royal-service.de/hero-bg.png)
+Professionelle Entkernung, Abbruch, Schadstoffsanierung und Entsorgungsmanagement in Deutschland.
 
-Professional website for **ROYAL SERVICE**, a leading provider of demolition, gutting, and hazardous material remediation services in Baden-Württemberg, Germany.
+![ROYAL SERVICE Logo](public/favicon.svg)
 
-## 🌟 Key Features
+## 🚀 Overview
 
-- **🎯 Advanced SEO**: Optimized meta tags, Open Graph, and JSON-LD structured data for star ratings in Google.
-- **🗺️ Interactive Maps**: Integrated Leaflet.js maps with custom markers for local presence.
-- **📱 Fully Responsive**: Seamless experience across mobile, tablet, and desktop.
-- **⚡ High Performance**: Lazy loading for images and maps, optimized for Core Web Vitals.
-- **📧 Smart Inquiry Form**: Integrated with EmailJS for real-time lead generation and file upload support.
-- **✨ Professional Animations**: Smooth scroll reveals, service card hover effects, and animated statistics.
-- **⚖️ Legal Compliance**: Fully ready with Impressum, Datenschutz (Privacy Policy), and AGB.
+This website is a high-performance, modern landing page for **ROYAL SERVICE**, a construction service company based in Germany. Built with React and the latest Tailwind CSS v4, it adheres to the highest technical and legal standards.
+
+## ✨ Key Features
+
+- **Professional Design**: Modern, responsive, and high-impact UI tailored for the construction industry.
+- **GDPR / DSGVO Compliant**: 100% self-hosted fonts and assets. No external calls to Google Fonts, ensuring full privacy compliance for the German market.
+- **Tailwind CSS v4 (Native)**: Built with the latest engine for maximum performance and a lean CSS footprint.
+- **Advanced SEO**: Fully optimized with JSON-LD Structured Data, Meta Tags, and Semantic HTML.
+- **Interactive Map**: Custom map integration for service area visualization.
+- **Contact Integration**: Connected with EmailJS for direct lead generation.
 
 ## 🛠️ Technology Stack
 
-- **Frontend**: React.js with TypeScript
-- **Styling**: Tailwind CSS
+- **Framework**: React 18
+- **Styling**: Tailwind CSS v4 (Official Vite Plugin)
 - **Animations**: Framer Motion
-- **Maps**: Leaflet.js & OpenStreetMap
-- **Form Handling**: EmailJS
-- **Icons**: Google Material Symbols
+- **Icons**: Material Symbols Outlined (Self-hosted)
+- **Bundler**: Vite 6
+- **Language**: TypeScript
 
-## 🚀 Getting Started
+## 📦 Setup & Development
 
-### Prerequisites
-
-- Node.js (v18 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/mohamadm1989/royal-team-service.git
-   ```
-
-2. Install dependencies:
+1. **Install dependencies**:
    ```bash
    npm install
    ```
 
-3. Set up environment variables:
-   Create a `.env.local` file and add your EmailJS keys:
-   ```env
-   VITE_EMAIL_SERVICE_ID=your_id
-   VITE_EMAIL_TEMPLATE_ID=your_id
-   VITE_EMAIL_PUBLIC_KEY=your_key
-   ```
-
-4. Run the development server:
+2. **Run development server**:
    ```bash
    npm run dev
    ```
 
-## 📦 Deployment
+3. **Build for production**:
+   ```bash
+   npm run build
+   ```
 
-This project is optimized for deployment on **Vercel** or **Netlify**.
+## ⚖️ Legal Standards (Germany)
 
-1. Connect your GitHub repository to Vercel/Netlify.
-2. Add the environment variables to the platform's dashboard.
-3. The build command is `npm run build` and the output directory is `dist`.
-
----
-
-## 📞 Contact
-
-- **Owner**: ROYAL SERVICE
-- **Address**: Hansenstraße 20, 72770 Reutlingen-Ohmenhausen
-- **Phone**: +49 160 94854768
-- **Email**: royal.team.service25@gmail.com
+The project has been specifically optimized for the German market:
+- **Local Fonts**: All Google Fonts (Roboto & Open Sans) are served from the internal `/fonts` directory.
+- **CSP**: Tight Content Security Policy implemented in `index.html`.
+- **Imprint/Privacy**: Dedicated routes for `Impressum` and `Datenschutz`.
 
 ---
-*Created with ❤️ for ROYAL SERVICE*
+*Created with professional standards for ROYAL SERVICE.*
