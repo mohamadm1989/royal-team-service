@@ -1,0 +1,35 @@
+
+import React from 'react';
+
+const Process: React.FC = () => {
+  return (
+    <section className="py-24 bg-slate-900" id="prozess">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-safety-yellow font-black uppercase tracking-widest text-sm mb-4">Der Weg zum Erfolg</h2>
+          <h3 className="text-4xl font-black text-white mb-4 uppercase">Unser Arbeitsprozess</h3>
+        </div>
+        <div className="flex flex-col md:flex-row justify-between items-start gap-12 relative">
+          <div className="hidden md:block absolute top-10 left-0 w-full h-0.5 bg-slate-800 z-0"></div>
+          <div className="relative z-10 flex-1 text-center">
+            <div className="w-20 h-20 bg-safety-yellow text-slate-900 text-2xl font-black rounded-full flex items-center justify-center mx-auto mb-6 border-8 border-slate-900">01</div>
+            <h4 className="text-xl font-bold mb-3 uppercase">Analyse & Planung</h4>
+            <p className="text-slate-400 text-sm">Detaillierte Bestandsaufnahme und Erstellung eines individuellen Sanierungskonzepts.</p>
+          </div>
+          <div className="relative z-10 flex-1 text-center">
+            <div className="w-20 h-20 bg-safety-yellow text-slate-900 text-2xl font-black rounded-full flex items-center justify-center mx-auto mb-6 border-8 border-slate-900">02</div>
+            <h4 className="text-xl font-bold mb-3 uppercase">Effiziente Durchführung</h4>
+            <p className="text-slate-400 text-sm">Fachgerechte Umsetzung durch unser spezialisiertes Team unter Einhaltung aller Standards.</p>
+          </div>
+          <div className="relative z-10 flex-1 text-center">
+            <div className="w-20 h-20 bg-safety-yellow text-slate-900 text-2xl font-black rounded-full flex items-center justify-center mx-auto mb-6 border-8 border-slate-900">03</div>
+            <h4 className="text-xl font-bold mb-3 uppercase">Abschluss & Qualität</h4>
+            <p className="text-slate-400 text-sm">Endkontrolle, Dokumentation und besenreine Übergabe Ihres Objekts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Process;
