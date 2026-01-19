@@ -61,11 +61,28 @@
       transition: background-color 0.3s;
     }
 
-    .header-container {
+    .header-container,
+    .hero-content {
       width: 100%;
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 1rem;
+    }
+
+    @media (min-width: 640px) {
+
+      .header-container,
+      .hero-content {
+        padding: 0 1.5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+
+      .header-container,
+      .hero-content {
+        padding: 0 2rem;
+      }
     }
 
     .header-inner {
@@ -146,10 +163,6 @@
     .hero-content {
       position: relative;
       z-index: 20;
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 1rem;
-      width: 100%;
     }
 
     @keyframes fadeInSlide {

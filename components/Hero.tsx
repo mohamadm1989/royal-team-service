@@ -38,7 +38,7 @@ const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
             </button>
             <a
               href="#leistungen"
-              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded font-bold transition-all border border-white/20 flex items-center justify-center gap-2"
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold transition-all border border-white/20 flex items-center justify-center gap-2"
             >
               Unsere Leistungen
             </a>

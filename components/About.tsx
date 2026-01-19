@@ -54,7 +54,7 @@ const About: React.FC = () => {
             <div className="rounded-lg overflow-hidden shadow-2xl border border-slate-700 h-[280px] md:h-[450px]">
               <MapComponent height="100%" />
             </div>
-            <div className="absolute -bottom-6 -left-6 bg-safety-yellow text-slate-900 p-8 font-black rounded shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out cursor-default">
+            <div className="absolute -bottom-6 -left-6 bg-safety-yellow text-slate-900 p-8 font-black rounded-xl shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out cursor-default">
               <span className="text-4xl block"><Counter end={10} suffix="+" /></span>
               <span className="uppercase text-xs tracking-tighter">Jahre Erfahrung</span>
             </div>

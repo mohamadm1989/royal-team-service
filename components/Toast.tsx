@@ -28,7 +28,7 @@ const Toast: React.FC<ToastProps> = ({ message, type, onClose }) => {
     }[type];
 
     return (
-        <div className={`fixed top-24 right-8 z-50 ${bgColor} text-white px-6 py-4 rounded-lg shadow-2xl flex items-center gap-3 animate-slide-in max-w-md`}>
+        <div className={`fixed top-24 right-8 z-50 ${bgColor} text-white px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3 animate-slide-in max-w-md`}>
             <span className="material-symbols-outlined text-2xl">{icon}</span>
             <p className="flex-1 font-medium">{message}</p>
             <button
