@@ -8,7 +8,7 @@ import emailjs from '@emailjs/browser';
 const MapComponent = React.lazy(() => import('./MapComponent'));
 
 const MapLoader = () => (
-  <div className="h-[250px] w-full bg-slate-800 animate-pulse rounded-2xl flex items-center justify-center border border-slate-700">
+  <div className="h-[250px] w-full bg-slate-800 animate-pulse rounded-md flex items-center justify-center border border-slate-700">
     <span className="text-slate-500 uppercase tracking-widest text-xs font-bold">Karte wird geladen...</span>
   </div>
 );
@@ -160,7 +160,7 @@ const InquiryPage: React.FC = () => {
               className="grid grid-cols-1 lg:grid-cols-3 gap-12"
             >
               <div className="lg:col-span-2">
-                <form onSubmit={handleSubmit} className="space-y-8 bg-slate-800/30 p-8 md:p-10 rounded-3xl border border-slate-800 shadow-xl backdrop-blur-sm">
+                <form onSubmit={handleSubmit} className="space-y-8 bg-slate-800/30 p-8 md:p-10 rounded-md border border-slate-800 shadow-xl backdrop-blur-sm">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Kontaktdaten */}
                     <m.div variants={itemVariants} className="space-y-6">
@@ -215,7 +215,7 @@ const InquiryPage: React.FC = () => {
 
                   <m.div variants={itemVariants} className="mt-8">
                     <label className="block text-sm font-semibold text-slate-300 mb-3 uppercase tracking-wider">Pläne oder Fotos hochladen (Optional)</label>
-                    <div className="border-2 border-dashed border-slate-700 rounded-2xl p-10 text-center hover:border-safety-yellow/50 hover:bg-safety-yellow/5 transition-all group cursor-pointer relative overflow-hidden">
+                    <div className="border-2 border-dashed border-slate-700 rounded-md p-10 text-center hover:border-safety-yellow/50 hover:bg-safety-yellow/5 transition-all group cursor-pointer relative overflow-hidden">
                       <div className="relative z-10">
                         <span className="material-symbols-outlined text-4xl text-slate-500 group-hover:text-safety-yellow mb-2 transition-transform group-hover:scale-110 duration-300">cloud_upload</span>
                         <p className="text-slate-400 group-hover:text-slate-200">Dateien هنا ziehen oder <span className="text-safety-yellow underline font-bold">auswählen</span></p>
@@ -269,11 +269,11 @@ const InquiryPage: React.FC = () => {
 
               {/* Sidebar Contact Info */}
               <m.div variants={itemVariants} className="space-y-8">
-                <div className="bg-slate-900/80 backdrop-blur-md p-8 rounded-3xl border border-slate-800 sticky top-28 shadow-2xl">
+                <div className="bg-slate-900/80 backdrop-blur-md p-8 rounded-md border border-slate-800 sticky top-28 shadow-2xl">
                   <h4 className="text-xl font-bold mb-8 text-white uppercase tracking-tight border-b border-slate-800 pb-4">Direkter Kontakt</h4>
                   <div className="space-y-8 mb-10">
                     <div className="flex items-start gap-4 group cursor-default">
-                      <div className="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center group-hover:bg-safety-yellow transition-colors">
+                      <div className="w-10 h-10 bg-slate-800 rounded-md flex items-center justify-center group-hover:bg-safety-yellow transition-colors">
                         <span className="material-symbols-outlined text-safety-yellow group-hover:text-slate-900 transition-colors">location_on</span>
                       </div>
                       <div>
@@ -282,7 +282,7 @@ const InquiryPage: React.FC = () => {
                       </div>
                     </div>
                     <div className="flex items-start gap-4 group cursor-default">
-                      <div className="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center group-hover:bg-safety-yellow transition-colors">
+                      <div className="w-10 h-10 bg-slate-800 rounded-md flex items-center justify-center group-hover:bg-safety-yellow transition-colors">
                         <span className="material-symbols-outlined text-safety-yellow group-hover:text-slate-900 transition-colors">call</span>
                       </div>
                       <div>
@@ -293,7 +293,7 @@ const InquiryPage: React.FC = () => {
                       </div>
                     </div>
                     <div className="flex items-start gap-4 group cursor-default">
-                      <div className="w-10 h-10 bg-slate-800 rounded-xl flex items-center justify-center group-hover:bg-safety-yellow transition-colors">
+                      <div className="w-10 h-10 bg-slate-800 rounded-md flex items-center justify-center group-hover:bg-safety-yellow transition-colors">
                         <span className="material-symbols-outlined text-safety-yellow group-hover:text-slate-900 transition-colors">mail</span>
                       </div>
                       <div>
@@ -314,7 +314,7 @@ const InquiryPage: React.FC = () => {
                   </div>
 
                   <div className="pt-8 border-t border-slate-800">
-                    <div className="flex items-center gap-3 bg-green-500/10 text-green-400 px-4 py-3 rounded-2xl border border-green-500/20 mb-4">
+                    <div className="flex items-center gap-3 bg-green-500/10 text-green-400 px-4 py-3 rounded-md border border-green-500/20 mb-4">
                       <span className="material-symbols-outlined text-sm">verified_user</span>
                       <span className="text-[10px] font-bold uppercase tracking-widest">24h Express Antwort</span>
                     </div>
