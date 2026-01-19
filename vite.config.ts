@@ -14,20 +14,29 @@ export default defineConfig(({ mode }) => {
       react(),
       tailwindcss(),
       {
-        name: 'inline-css',
+        name: 'performance-optimize',
         transformIndexHtml(html, context) {
           if (!context.bundle) return html;
           let cssInlined = '';
+          let preloads = '';
+
           for (const [fileName, asset] of Object.entries(context.bundle)) {
+            // 1. Inline CSS
             if (fileName.endsWith('.css')) {
               cssInlined += `<style>${(asset as any).source}</style>`;
-              // Remove the CSS from the bundle to prevent it being written as a file
               delete context.bundle[fileName];
             }
+            // 2. Preload JS chunks to break serial loading chains
+            else if (fileName.endsWith('.js')) {
+              preloads += `<link rel="modulepreload" href="/${fileName}">`;
+            }
           }
+
           // Remove any existing link tags that point to CSS files to prevent 404s
           html = html.replace(/<link[^>]*?href="[^"]*?\.css"[^>]*?>/gi, '');
-          return html.replace('</head>', `${cssInlined}</head>`);
+
+          // Inject Inlined CSS and Module Preloads into <head>
+          return html.replace('</head>', `${cssInlined}${preloads}</head>`);
         }
       }
     ],
