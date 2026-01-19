@@ -99,10 +99,10 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden text-white p-3 hover:bg-slate-800 rounded-lg transition-colors min-w-[48px] min-h-[48px] flex items-center justify-center"
+              className="md:hidden text-white p-2 hover:bg-slate-800 rounded-md transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label={isMobileMenuOpen ? "Menü schließen" : "Menü öffnen"}
             >
-              <span className="material-symbols-outlined text-4xl">
+              <span className="material-symbols-outlined text-3xl">
                 {isMobileMenuOpen ? 'close' : 'menu'}
               </span>
             </button>
@@ -112,32 +112,32 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-slate-900 border-t border-slate-700 animate-slide-down">
+        <div className="md:hidden absolute top-auto left-0 right-0 bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50 shadow-2xl animate-slide-down">
           <nav className="flex flex-col p-4 space-y-2">
             <a
               href="#leistungen"
-              className="text-left text-white hover:text-safety-yellow py-3 px-4 hover:bg-slate-800 rounded transition-colors font-semibold"
+              className="text-left text-white/90 hover:text-safety-yellow py-3 px-4 hover:bg-white/5 rounded-md transition-colors font-semibold"
               onClick={(e) => { e.preventDefault(); handleNavClick('leistungen'); }}
             >
               Leistungen
             </a>
             <a
               href="#warum-wir"
-              className="text-left text-white hover:text-safety-yellow py-3 px-4 hover:bg-slate-800 rounded transition-colors font-semibold"
+              className="text-left text-white/90 hover:text-safety-yellow py-3 px-4 hover:bg-white/5 rounded-md transition-colors font-semibold"
               onClick={(e) => { e.preventDefault(); handleNavClick('warum-wir'); }}
             >
               Warum Wir
             </a>
             <a
               href="#prozess"
-              className="text-left text-white hover:text-safety-yellow py-3 px-4 hover:bg-slate-800 rounded transition-colors font-semibold"
+              className="text-left text-white/90 hover:text-safety-yellow py-3 px-4 hover:bg-white/5 rounded-md transition-colors font-semibold"
               onClick={(e) => { e.preventDefault(); handleNavClick('prozess'); }}
             >
               Prozess
             </a>
             <a
               href="#inquiry"
-              className="text-left text-white hover:text-safety-yellow py-3 px-4 hover:bg-slate-800 rounded transition-colors font-semibold"
+              className="text-left text-white/90 hover:text-safety-yellow py-3 px-4 hover:bg-white/5 rounded-md transition-colors font-semibold"
               onClick={(e) => { e.preventDefault(); handleInquiryClick(); }}
             >
               Kontakt
