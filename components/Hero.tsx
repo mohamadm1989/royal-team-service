@@ -7,7 +7,7 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
-  const imageUrl = "/hero-bg-final.png";
+  const imageUrl = "/hero-bg-final.webp";
 
   return (
     <section className="relative min-h-[800px] flex items-center overflow-hidden pt-20">
@@ -17,7 +17,7 @@ const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/60 to-transparent z-10"></div>
         <img
           src={imageUrl}
-          alt="ROYAL SERVICE - Professionelle Entkernung und Abbruch"
+          alt="Royal Team Service - Baustelle Abbrucharbeiten und Entkernung in Baden-Württemberg"
           className="w-full h-full object-cover scale-105"
           loading="lazy"
         />
@@ -34,7 +34,7 @@ const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
               <span className="text-safety-yellow">Wir schaffen Platz für Ihre Visionen!</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed font-normal">
-              Ihr zuverlässiger und flexibler Partner für professionelle Entkernung, Abbruch und Schadstoffsanierung in der Region und europaweit.
+              Ihr zuverlässiger Partner für professionelle Entkernung, Abbruch und Schadstoffsanierung in <strong>Reutlingen, Stuttgart, Tübingen</strong> و Region – Prompt, sicher und fachgerecht.
             </p>
           </motion.div>
 
@@ -46,7 +46,7 @@ const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
           >
             <button
               onClick={onInquiryClick}
-              className="bg-safety-yellow hover:bg-safety-yellow-dark text-slate-900 px-8 py-4 rounded font-black transition-all shadow-xl flex items-center justify-center gap-2"
+              className="bg-safety-yellow hover:bg-safety-yellow-dark text-slate-900 px-8 py-5 sm:py-4 rounded-xl font-black transition-all shadow-xl flex items-center justify-center gap-2 active:scale-95"
             >
               Jetzt Angebot anfordern
               <span className="material-symbols-outlined">arrow_forward</span>

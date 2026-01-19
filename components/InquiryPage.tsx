@@ -279,7 +279,7 @@ const InquiryPage: React.FC = () => {
                       </div>
                       <div>
                         <p className="text-xs font-bold text-slate-500 uppercase mb-1 tracking-widest">Mobil</p>
-                        <a href="tel:+4916094854768" className="text-slate-200 text-sm font-bold hover:text-safety-yellow transition-colors">
+                        <a href="tel:+4916094854768" className="text-slate-200 text-base md:text-sm font-black hover:text-safety-yellow transition-colors py-1 block">
                           0160 94854768
                         </a>
                       </div>

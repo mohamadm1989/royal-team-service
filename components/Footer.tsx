@@ -14,8 +14,8 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-3 cursor-pointer" onClick={() => onNavClick()}>
                 <img
-                  src="/logo-transparent-final.png"
-                  alt="Royal Team Service Logo"
+                  src="/logo-transparent-final.webp"
+                  alt="Royal Team Service - Ihr Partner für Abbruch und Entkernung in Baden-Württemberg"
                   className="h-20 w-auto object-contain brightness-125 contrast-115 drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]"
                 />
               </div>

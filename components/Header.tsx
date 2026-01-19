@@ -41,8 +41,8 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => onNavClick()}>
             <img
-              src="/logo-transparent-final.png"
-              alt="Royal Team Service Logo"
+              src="/logo-transparent-final.webp"
+              alt="Royal Team Service - Entkernung, Abbruch und Schadstoffsanierung in Reutlingen & Stuttgart"
               className="h-24 w-auto object-contain brightness-125 contrast-115 drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]"
             />
           </div>
@@ -93,10 +93,10 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden text-white p-2 hover:bg-slate-800 rounded transition-colors"
-              aria-label="Toggle menu"
+              className="md:hidden text-white p-3 hover:bg-slate-800 rounded-lg transition-colors min-w-[48px] min-h-[48px] flex items-center justify-center"
+              aria-label={isMobileMenuOpen ? "Menü schließen" : "Menü öffnen"}
             >
-              <span className="material-symbols-outlined text-3xl">
+              <span className="material-symbols-outlined text-4xl">
                 {isMobileMenuOpen ? 'close' : 'menu'}
               </span>
             </button>

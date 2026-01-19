@@ -1,12 +1,14 @@
-# ROYAL SERVICE - Abbruch & Entkernung
+# ROYAL TEAM SERVICE - Abbruch & Entkernung
 
-Professionelle Entkernung, Abbruch, Schadstoffsanierung und Entsorgungsmanagement in Deutschland.
+Professionelle Entkernung, Abbrucharbeiten, Schadstoffsanierung und Entsorgungsmanagement in Deutschland.
 
-![ROYAL SERVICE Logo](public/favicon.svg)
+![ROYAL TEAM SERVICE Logo](public/logo-transparent-final.png)
 
-## 🚀 Overview
+## 🚀 Live Demo
+Visit the live site here: [https://stellar-melomakarona-096c6d.netlify.app/](https://stellar-melomakarona-096c6d.netlify.app/)
 
-This website is a high-performance, modern landing page for **ROYAL SERVICE**, a construction service company based in Germany. Built with React and the latest Tailwind CSS v4, it adheres to the highest technical and legal standards.
+## 🛠️ Performance & SEO
+The website is optimized for speed, accessibility, and high visibility on search engines.
 
 ## ✨ Key Features
 
@@ -16,6 +18,16 @@ This website is a high-performance, modern landing page for **ROYAL SERVICE**, a
 - **Advanced SEO**: Fully optimized with JSON-LD Structured Data, Meta Tags, and Semantic HTML.
 - **Interactive Map**: Custom map integration for service area visualization.
 - **Contact Integration**: Connected with EmailJS for direct lead generation.
+
+## 📦 Services Offered
+
+- **Entkernung**: Rückbau bis auf die statische Grundsubstanz.
+- **Abbrucharbeiten**: Professioneller Abbruch von Wänden und Strukturen.
+- **Montage und Demontage**: Fachgerechter Ein- und Ausbau von Anlagen.
+- **Schadstoffsanierung**: Sicherer Umgang mit Asbest und Gefahrstoffen.
+- **Entrümpelung**: Besenreine Räumung von Objekten.
+- **Reinigungsarbeiten**: Gründliche Bauendreinigung.
+- **Entsorgungsmanagement**: Gesetzeskonforme Abfalltrennung.
 
 ## 🛠️ Technology Stack
 
@@ -51,4 +63,4 @@ The project has been specifically optimized for the German market:
 - **Imprint/Privacy**: Dedicated routes for `Impressum` and `Datenschutz`.
 
 ---
-*Created with professional standards for ROYAL SERVICE.*
+*Created with professional standards for ROYAL TEAM SERVICE.*

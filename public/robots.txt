@@ -2,10 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://royal-service.de/sitemap.xml
-
-# Crawl-delay for polite crawling
-Crawl-delay: 10
-
-# Disallow admin or private areas (if any in future)
-# Disallow: /admin/
+Sitemap: https://royal-team-service.vercel.app/sitemap.xml
