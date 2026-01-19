@@ -50,7 +50,7 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="nav-desktop hidden md:flex items-center gap-8" role="navigation" aria-label="Main navigation">
+          <nav className="nav-desktop hidden lg:flex items-center gap-8" role="navigation" aria-label="Main navigation">
             <a
               href="#leistungen"
               className="text-sm font-semibold hover:text-safety-yellow transition-colors"
@@ -90,7 +90,7 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={onInquiryClick}
-              className="hidden md:block bg-safety-yellow hover:bg-safety-yellow-dark text-slate-900 px-4 md:px-6 py-2 md:py-2.5 rounded-md font-bold transition-all shadow-md active:scale-95 text-xs md:text-sm uppercase"
+              className="hidden lg:block bg-safety-yellow hover:bg-safety-yellow-dark text-slate-900 px-4 md:px-6 py-2 md:py-2.5 rounded-md font-bold transition-all shadow-md active:scale-95 text-xs md:text-sm uppercase"
               aria-label="Angebot anfordern - Kontaktformular öffnen"
             >
               Angebot anfordern
@@ -99,7 +99,7 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden text-white p-2 hover:bg-slate-800 rounded-md transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+              className="lg:hidden text-white p-2 hover:bg-slate-800 rounded-md transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label={isMobileMenuOpen ? "Menü schließen" : "Menü öffnen"}
             >
               <span className="material-symbols-outlined text-3xl">
@@ -112,7 +112,7 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-auto left-0 right-0 bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50 shadow-2xl animate-slide-down">
+        <div className="lg:hidden absolute top-auto left-0 right-0 bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50 shadow-2xl animate-slide-down">
           <nav className="flex flex-col p-4 space-y-2">
             <a
               href="#leistungen"
