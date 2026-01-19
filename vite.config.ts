@@ -19,19 +19,14 @@ export default defineConfig(({ mode }) => {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
     },
     build: {
-      modulePreload: false, // Truly disable module preloading to declutter the critical path
+      modulePreload: true, // Enable module preloading to break the critical request chain
       rollupOptions: {
         output: {
-          manualChunks(id) {
-            if (id.includes('node_modules')) {
-              if (id.includes('react')) return 'vendor-react';
-              if (id.includes('framer-motion')) return 'vendor-framer';
-              return 'vendor-libs';
-            }
-          },
+          // No manual chunks to keep the request chain shallow (Depth 1-2)
+          manualChunks: undefined,
         },
       },
-      chunkSizeWarningLimit: 1000,
+      chunkSizeWarningLimit: 2000,
       cssCodeSplit: false,
       minify: 'terser',
       terserOptions: {
