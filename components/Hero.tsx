@@ -31,7 +31,7 @@ const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
           >
             <button
               onClick={onInquiryClick}
-              className="bg-safety-yellow hover:bg-safety-yellow-dark text-slate-900 px-8 py-5 sm:py-4 rounded-xl font-black transition-all shadow-xl flex items-center justify-center gap-2 active:scale-95"
+              className="bg-safety-yellow hover:bg-safety-yellow-dark text-slate-900 px-8 py-4 rounded-xl font-black transition-all shadow-xl flex items-center justify-center gap-2 active:scale-95"
             >
               Jetzt Angebot anfordern
               <span className="material-symbols-outlined">arrow_forward</span>
