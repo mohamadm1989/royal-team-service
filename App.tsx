@@ -2,9 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Services from './components/Services';
-import About from './components/About';
-import Process from './components/Process';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
 import { LazyMotion, domAnimation, m, AnimatePresence } from 'framer-motion';
@@ -15,11 +12,51 @@ const Impressum = React.lazy(() => import('./components/Impressum'));
 const Datenschutz = React.lazy(() => import('./components/Datenschutz'));
 const AGB = React.lazy(() => import('./components/AGB'));
 
+// Below-the-fold components
+const Services = React.lazy(() => import('./components/Services'));
+const About = React.lazy(() => import('./components/About'));
+const Process = React.lazy(() => import('./components/Process'));
+
 const PageLoader = () => (
   <div className="flex-grow flex items-center justify-center bg-slate-bg min-h-[60vh]">
     <div className="w-12 h-12 border-4 border-safety-yellow border-t-transparent rounded-full animate-spin"></div>
   </div>
 );
+
+const SectionLoader = () => (
+  <div className="w-full h-[400px] bg-slate-900 animate-pulse flex items-center justify-center border-y border-slate-800">
+    <div className="w-8 h-8 border-2 border-slate-700 border-t-safety-yellow rounded-full animate-spin"></div>
+  </div>
+);
+
+const LazyView: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [isInView, setIsInView] = useState(false);
+  const ref = React.useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '200px' }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={ref} className="min-h-[100px]">
+      {isInView ? <React.Suspense fallback={<SectionLoader />}>{children}</React.Suspense> : null}
+    </div>
+  );
+};
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<'home' | 'inquiry' | 'impressum' | 'datenschutz' | 'agb'>('home');
@@ -86,9 +123,15 @@ const App: React.FC = () => {
                 className="flex-grow"
               >
                 <Hero onInquiryClick={navigateToInquiry} />
-                <Services />
-                <About />
-                <Process />
+                <LazyView>
+                  <Services />
+                </LazyView>
+                <LazyView>
+                  <About />
+                </LazyView>
+                <LazyView>
+                  <Process />
+                </LazyView>
                 <section className="py-24 bg-slate-bg border-y border-slate-800" id="ueber-uns">
                   <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <m.h2

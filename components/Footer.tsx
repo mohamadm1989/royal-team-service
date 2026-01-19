@@ -12,7 +12,7 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           <div className="space-y-6">
             <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-3 cursor-pointer" onClick={() => onNavClick()}>
+              <a href="/" className="flex items-center gap-3 cursor-pointer" onClick={(e) => { e.preventDefault(); onNavClick(); }}>
                 <img
                   src="/logo-transparent-final.webp"
                   alt="Royal Team Service - Ihr Partner für Abbruch und Entkernung in Baden-Württemberg"
@@ -20,7 +20,7 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
                   width="200"
                   height="80"
                 />
-              </div>
+              </a>
               <p className="text-slate-500 text-sm leading-relaxed">
                 Ihr kompetenter Partner für Bau- und Industriedienstleistungen in Deutschland und ganz Europa.
               </p>
@@ -50,22 +50,22 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
           <div>
             <h5 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Leistungen Schnellzugriff</h5>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li><button onClick={() => onNavClick('leistungen')} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Entkernung</button></li>
-              <li><button onClick={() => onNavClick('leistungen')} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Abbrucharbeiten</button></li>
-              <li><button onClick={() => onNavClick('leistungen')} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Montage und Demontage</button></li>
-              <li><button onClick={() => onNavClick('leistungen')} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Schadstoffsanierung (Asbest)</button></li>
-              <li><button onClick={() => onNavClick('leistungen')} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Entrümpelung</button></li>
-              <li><button onClick={() => onNavClick('leistungen')} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Reinigungsarbeiten</button></li>
-              <li><button onClick={() => onNavClick('leistungen')} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Entsorgungsmanagement</button></li>
+              <li><a href="#leistungen" onClick={(e) => { e.preventDefault(); onNavClick('leistungen'); }} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Entkernung</a></li>
+              <li><a href="#leistungen" onClick={(e) => { e.preventDefault(); onNavClick('leistungen'); }} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Abbrucharbeiten</a></li>
+              <li><a href="#leistungen" onClick={(e) => { e.preventDefault(); onNavClick('leistungen'); }} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Montage und Demontage</a></li>
+              <li><a href="#leistungen" onClick={(e) => { e.preventDefault(); onNavClick('leistungen'); }} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Schadstoffsanierung (Asbest)</a></li>
+              <li><a href="#leistungen" onClick={(e) => { e.preventDefault(); onNavClick('leistungen'); }} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Entrümpelung</a></li>
+              <li><a href="#leistungen" onClick={(e) => { e.preventDefault(); onNavClick('leistungen'); }} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Reinigungsarbeiten</a></li>
+              <li><a href="#leistungen" onClick={(e) => { e.preventDefault(); onNavClick('leistungen'); }} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Entsorgungsmanagement</a></li>
             </ul>
           </div>
         </div>
         <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-600 font-medium">
           <p>© 2026 ROYAL TEAM SERVICE. Alle Rechte vorbehalten.</p>
           <div className="flex gap-6 uppercase">
-            <a className="hover:text-safety-yellow cursor-pointer" onClick={() => { window.location.hash = 'impressum'; window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Impressum</a>
-            <a className="hover:text-safety-yellow cursor-pointer" onClick={() => { window.location.hash = 'datenschutz'; window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Datenschutz</a>
-            <a className="hover:text-safety-yellow cursor-pointer" onClick={() => { window.location.hash = 'agb'; window.scrollTo({ top: 0, behavior: 'smooth' }); }}>AGB</a>
+            <a href="#impressum" className="hover:text-safety-yellow" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Impressum</a>
+            <a href="#datenschutz" className="hover:text-safety-yellow" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Datenschutz</a>
+            <a href="#agb" className="hover:text-safety-yellow" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>AGB</a>
           </div>
         </div>
       </div>

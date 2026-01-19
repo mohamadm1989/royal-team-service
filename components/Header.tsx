@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center gap-3 cursor-pointer" onClick={() => onNavClick()}>
+          <a href="/" className="flex items-center gap-3 cursor-pointer" onClick={(e) => { e.preventDefault(); onNavClick(); }}>
             <img
               src="/logo-transparent-final.webp"
               alt="Royal Team Service - Entkernung, Abbruch und Schadstoffsanierung in Reutlingen & Stuttgart"
@@ -47,38 +47,42 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
               width="240"
               height="96"
             />
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8" role="navigation" aria-label="Main navigation">
-            <button
+            <a
+              href="#leistungen"
               className="text-sm font-semibold hover:text-safety-yellow transition-colors"
-              onClick={() => onNavClick('leistungen')}
+              onClick={(e) => { e.preventDefault(); onNavClick('leistungen'); }}
               aria-label="Zu Leistungen navigieren"
             >
               Leistungen
-            </button>
-            <button
+            </a>
+            <a
+              href="#warum-wir"
               className="text-sm font-semibold hover:text-safety-yellow transition-colors"
-              onClick={() => onNavClick('warum-wir')}
+              onClick={(e) => { e.preventDefault(); onNavClick('warum-wir'); }}
               aria-label="Zu Warum Wir navigieren"
             >
               Warum Wir
-            </button>
-            <button
+            </a>
+            <a
+              href="#prozess"
               className="text-sm font-semibold hover:text-safety-yellow transition-colors"
-              onClick={() => onNavClick('prozess')}
+              onClick={(e) => { e.preventDefault(); onNavClick('prozess'); }}
               aria-label="Zu Prozess navigieren"
             >
               Prozess
-            </button>
-            <button
+            </a>
+            <a
+              href="#inquiry"
               className="text-sm font-semibold hover:text-safety-yellow transition-colors"
-              onClick={onInquiryClick}
+              onClick={(e) => { e.preventDefault(); onInquiryClick(); }}
               aria-label="Zu Kontakt navigieren"
             >
               Kontakt
-            </button>
+            </a>
           </nav>
 
           <div className="flex items-center gap-4">
@@ -110,36 +114,41 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-slate-900 border-t border-slate-700 animate-slide-down">
           <nav className="flex flex-col p-4 space-y-2">
-            <button
+            <a
+              href="#leistungen"
               className="text-left text-white hover:text-safety-yellow py-3 px-4 hover:bg-slate-800 rounded transition-colors font-semibold"
-              onClick={() => handleNavClick('leistungen')}
+              onClick={(e) => { e.preventDefault(); handleNavClick('leistungen'); }}
             >
               Leistungen
-            </button>
-            <button
+            </a>
+            <a
+              href="#warum-wir"
               className="text-left text-white hover:text-safety-yellow py-3 px-4 hover:bg-slate-800 rounded transition-colors font-semibold"
-              onClick={() => handleNavClick('warum-wir')}
+              onClick={(e) => { e.preventDefault(); handleNavClick('warum-wir'); }}
             >
               Warum Wir
-            </button>
-            <button
+            </a>
+            <a
+              href="#prozess"
               className="text-left text-white hover:text-safety-yellow py-3 px-4 hover:bg-slate-800 rounded transition-colors font-semibold"
-              onClick={() => handleNavClick('prozess')}
+              onClick={(e) => { e.preventDefault(); handleNavClick('prozess'); }}
             >
               Prozess
-            </button>
-            <button
+            </a>
+            <a
+              href="#inquiry"
               className="text-left text-white hover:text-safety-yellow py-3 px-4 hover:bg-slate-800 rounded transition-colors font-semibold"
-              onClick={handleInquiryClick}
+              onClick={(e) => { e.preventDefault(); handleInquiryClick(); }}
             >
               Kontakt
-            </button>
-            <button
-              onClick={handleInquiryClick}
-              className="bg-safety-yellow hover:bg-safety-yellow-dark text-slate-900 px-6 py-3 rounded font-bold transition-all shadow-md active:scale-95 text-sm uppercase mt-2"
+            </a>
+            <a
+              href="#inquiry"
+              onClick={(e) => { e.preventDefault(); handleInquiryClick(); }}
+              className="bg-safety-yellow hover:bg-safety-yellow-dark text-center text-slate-900 px-6 py-3 rounded font-bold transition-all shadow-md active:scale-95 text-sm uppercase mt-2"
             >
               Angebot anfordern
-            </button>
+            </a>
           </nav>
         </div>
       )}

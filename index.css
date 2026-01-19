@@ -93,11 +93,24 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--color-slate-bg);
     color: white;
     font-family: var(--font-sans);
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  img[src*="logo-transparent-final.webp"] {
+    aspect-ratio: 240 / 96;
+    /* Set aspect ratio to reserve space */
+    content-visibility: auto;
+    /* Optimization for off-screen logos if needed */
   }
 }
 

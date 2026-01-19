@@ -8,12 +8,19 @@
 
   <!-- Preconnect and Preload for Performance -->
   <link rel="preconnect" href="https://esm.sh">
+  <link rel="dns-prefetch" href="https://esm.sh">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+  <!-- Critical Assets Preload -->
+  <link rel="preload" href="/index.css" as="style">
+  <link rel="preload" href="/fonts/roboto-v50-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/open-sans-v44-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/material-symbols-outlined.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Regular Font Preloads -->
   <link rel="preload" href="/fonts/roboto-v50-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/open-sans-v44-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/roboto-v50-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Meta Tags for SEO & Social Media -->
   <title>ROYAL TEAM SERVICE | Entkernung, Abbruch & Schadstoffsanierung</title>
@@ -90,19 +97,6 @@
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://royal-team-service.vercel.app/" />
-
-  <!-- Import Map -->
-  <script type="importmap">
-  {
-    "imports": {
-      "react-dom/": "https://esm.sh/react-dom@^18.0.0/",
-      "react/": "https://esm.sh/react@^18.0.0/",
-      "react": "https://esm.sh/react@^18.0.0",
-      "framer-motion": "https://esm.sh/framer-motion@11.0.0",
-      "@google/genai": "https://esm.sh/@google/genai@^1.37.0"
-    }
-  }
-  </script>
 
   <link rel="stylesheet" href="/index.css">
 
