@@ -25,8 +25,8 @@ const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
         <div className="max-w-3xl">
           <m.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ x: -50 }}
+            animate={{ x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <h1 className="hero-title text-4xl md:text-6xl font-black text-white leading-tight mb-6 uppercase">
