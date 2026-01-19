@@ -33,7 +33,7 @@ const Impressum: React.FC = () => {
                             <h2 className="text-2xl font-bold text-safety-yellow uppercase mb-4">Kontakt</h2>
                             <div className="text-slate-300 space-y-2">
                                 <p><span className="font-semibold text-white">Telefon:</span> 0160 94854768</p>
-                                <p><span className="font-semibold text-white">E-Mail:</span> royal.team.service25@gmail.com</p>
+                                <p><span className="font-semibold text-white">E-Mail:</span> info@royalteam-service.de</p>
                             </div>
                         </div>
 

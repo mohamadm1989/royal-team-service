@@ -53,13 +53,13 @@ const InquiryPage: React.FC = () => {
     try {
       // Prepare email parameters
       const templateParams = {
-        from_name: formData.get('name'),
+        from_name: formData.get('full-name'),
         from_email: formData.get('email'),
         phone: formData.get('phone'),
         company: formData.get('company') || 'Nicht angegeben',
-        project_type: formData.get('projectType'),
-        project_size: formData.get('projectSize'),
-        message: formData.get('message'),
+        project_type: formData.get('service-type'),
+        project_size: 'In Beschreibung angegeben',
+        message: formData.get('description'),
         files_count: uploadedFiles.length,
         files_info: uploadedFiles.map(f => `${f.name} (${(f.size / 1024).toFixed(1)}KB)`).join(', ') || 'Keine Dateien'
       };
@@ -301,7 +301,7 @@ const InquiryPage: React.FC = () => {
                       </div>
                       <div>
                         <p className="text-xs font-bold text-slate-500 uppercase mb-1 tracking-widest">E-Mail</p>
-                        <p className="text-slate-200 text-sm break-all font-medium">royal.team.service25@gmail.com</p>
+                        <p className="text-slate-200 text-sm break-all font-medium">info@royalteam-service.de</p>
                       </div>
                     </div>
                   </div>

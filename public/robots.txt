@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://royal-team-service.vercel.app/sitemap.xml
+Sitemap: https://royalteam-service.de/sitemap.xml

@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
-import { SpeedInsights } from "@vercel/speed-insights/react";
+
 import { LazyMotion, m, AnimatePresence } from 'framer-motion';
 
 // Dynamically load Framer Motion features
@@ -213,7 +213,7 @@ const App: React.FC = () => {
 
         <Footer onNavClick={navigateToHome} />
         <BackToTop />
-        <SpeedInsights />
+
       </div>
     </LazyMotion>
   );

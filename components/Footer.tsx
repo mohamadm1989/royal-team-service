@@ -41,8 +41,8 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
               </li>
               <li className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-safety-yellow text-lg">mail</span>
-                <a href="mailto:royal.team.service25@gmail.com" className="hover:text-safety-yellow transition-colors">
-                  royal.team.service25@gmail.com
+                <a href="mailto:info@royalteam-service.de" className="hover:text-safety-yellow transition-colors">
+                  info@royalteam-service.de
                 </a>
               </li>
             </ul>
