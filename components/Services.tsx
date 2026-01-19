@@ -29,7 +29,7 @@ const Services: React.FC = () => {
             {
               icon: "engineering",
               title: "Entkernung",
-              desc: "Systematischer Rückbau von Gebäudeteilen bis auf die statische Grundsubstanz – präzise und fachgerecht."
+              desc: "Systematischer Rückbau von Gebäudeteilen bis auf die statische Grundsubstanz. Wir entfernen nicht tragende Wände, Deckenverkleidungen sowie alle Arten von Bodenbelägen."
             },
             {
               icon: "architecture",
