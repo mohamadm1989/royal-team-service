@@ -13,6 +13,23 @@ export default defineConfig(({ mode }) => {
     plugins: [
       react(),
       tailwindcss(),
+      {
+        name: 'inline-css',
+        transformIndexHtml(html, context) {
+          if (!context.bundle) return html;
+          let cssInlined = '';
+          for (const [fileName, asset] of Object.entries(context.bundle)) {
+            if (fileName.endsWith('.css')) {
+              cssInlined += `<style>${(asset as any).source}</style>`;
+              // Remove the CSS from the bundle to prevent it being written as a file
+              delete context.bundle[fileName];
+            }
+          }
+          // Remove any existing link rel="stylesheet" tags that might have been injected
+          html = html.replace(/<link rel="stylesheet" href="\/assets\/[^>]+>/g, '');
+          return html.replace('</head>', `${cssInlined}</head>`);
+        }
+      }
     ],
     define: {
       'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
