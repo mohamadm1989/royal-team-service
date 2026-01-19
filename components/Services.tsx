@@ -41,11 +41,7 @@ const Services: React.FC = () => {
               title: "Montage und Demontage",
               desc: "Wir übernehmen den Auf- und Abbau von Konstruktionen, Maschinen, technischen Anlagen sowie Bauelementen – präzise, sicher und termingerecht."
             },
-            {
-              icon: "warning",
-              title: "Schadstoffsanierung (Asbest)",
-              desc: "Sicherer Umgang und Sanierung von Gefahrstoffen nach höchsten Sicherheitsstandards (TRGS 519)."
-            },
+
             {
               icon: "delete_sweep",
               title: "Entrümpelung",

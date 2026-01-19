@@ -22,7 +22,7 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
                 />
               </a>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Ihr kompetenter Partner für Bau- und Industriedienstleistungen in Deutschland und ganz Europa.
+                Ihr Experte für Abbruch & Entkernung in der Region – Sicher. Sauber. Termingerecht. Deutschlandweit und Europaweit ihr Partner vor anspruchsvolle Projekte.
               </p>
             </div>
           </div>
@@ -53,7 +53,7 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
               <li><a href="#leistungen" onClick={(e) => { e.preventDefault(); onNavClick('leistungen'); }} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Entkernung</a></li>
               <li><a href="#leistungen" onClick={(e) => { e.preventDefault(); onNavClick('leistungen'); }} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Abbrucharbeiten</a></li>
               <li><a href="#leistungen" onClick={(e) => { e.preventDefault(); onNavClick('leistungen'); }} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Montage und Demontage</a></li>
-              <li><a href="#leistungen" onClick={(e) => { e.preventDefault(); onNavClick('leistungen'); }} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Schadstoffsanierung (Asbest)</a></li>
+
               <li><a href="#leistungen" onClick={(e) => { e.preventDefault(); onNavClick('leistungen'); }} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Entrümpelung</a></li>
               <li><a href="#leistungen" onClick={(e) => { e.preventDefault(); onNavClick('leistungen'); }} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Reinigungsarbeiten</a></li>
               <li><a href="#leistungen" onClick={(e) => { e.preventDefault(); onNavClick('leistungen'); }} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Entsorgungsmanagement</a></li>

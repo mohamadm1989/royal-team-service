@@ -25,7 +25,7 @@ const About: React.FC = () => {
                 { icon: "workspace_premium", title: "Erfahrung & Expertise", text: "Jahre an Fachwissen in komplexen Bauprojekten." },
                 { icon: "sync_alt", title: "Flexibilität", text: "Anpassung an Ihre individuellen Zeitpläne." },
                 { icon: "payments", title: "Faire Konditionen", text: "Transparente Preisgestaltung ohne Überraschungen." },
-                { icon: "gavel", title: "Zertifizierte Sicherheit", text: "Strikte Einhaltung aller Schutzvorschriften." }
+                { icon: "gavel", title: "Sicherheit am Bau", text: "Rückbau- und Demontagearbeiten unter Einhaltung aller gesetzlichen Arbeitsschutz- und Sicherheitsvorgaben." }
               ].map((item, i) => (
                 <m.div
                   key={i}

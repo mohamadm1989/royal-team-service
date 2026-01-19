@@ -19,7 +19,7 @@ const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
               <span className="text-safety-yellow">Wir schaffen Platz für Ihre Visionen!</span>
             </h1>
             <p className="hero-description text-lg md:text-xl text-slate-300 mb-10 leading-relaxed font-normal">
-              Ihr Experte für Abbruch & Entkernung in der Region – <strong>Sicher. Sauber. Termingerecht.</strong> Von Reutlingen bis Stuttgart Ihr Partner für anspruchsvolle Projekte.
+              Ihr Experte für Abbruch & Entkernung in der Region – <strong>Sicher. Sauber. Termingerecht.</strong> Deutschlandweit und Europaweit ihr Partner vor anspruchsvolle Projekte.
             </p>
 
 
