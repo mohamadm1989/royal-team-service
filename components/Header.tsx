@@ -37,8 +37,8 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
         : 'bg-transparent border-b border-transparent'
         }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="header-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="header-inner flex items-center justify-between h-20">
           <a href="/" className="flex items-center gap-3 cursor-pointer" onClick={(e) => { e.preventDefault(); onNavClick(); }}>
             <img
               src="/logo-transparent-final.webp"
@@ -50,7 +50,7 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8" role="navigation" aria-label="Main navigation">
+          <nav className="nav-desktop hidden md:flex items-center gap-8" role="navigation" aria-label="Main navigation">
             <a
               href="#leistungen"
               className="text-sm font-semibold hover:text-safety-yellow transition-colors"
@@ -85,7 +85,7 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
             </a>
           </nav>
 
-          <div className="flex items-center gap-4">
+          <div className="button-group flex items-center gap-4">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

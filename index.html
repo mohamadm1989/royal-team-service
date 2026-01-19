@@ -61,6 +61,38 @@
       transition: background-color 0.3s;
     }
 
+    .header-container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .nav-desktop {
+      display: none;
+    }
+
+    .button-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .nav-desktop {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+    }
+
     .header-logo {
       height: 96px;
       width: 240px;
