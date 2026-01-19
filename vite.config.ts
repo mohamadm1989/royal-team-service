@@ -32,7 +32,7 @@ export default defineConfig(({ mode }) => {
         },
       },
       chunkSizeWarningLimit: 1000,
-      cssCodeSplit: true,
+      cssCodeSplit: false,
       minify: 'terser',
       terserOptions: {
         compress: {

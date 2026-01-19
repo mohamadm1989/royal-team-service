@@ -13,7 +13,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Critical Assets Preload -->
-  <link rel="preload" href="/index.css" as="style">
   <link rel="preload" href="/fonts/roboto-v50-latin-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/open-sans-v44-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/hero-bg-final.webp" as="image" fetchpriority="high">
@@ -21,6 +20,38 @@
 
   <!-- Critical CSS Inlining -->
   <style>
+    @font-face {
+      font-display: swap;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 300;
+      src: url('/fonts/roboto-v50-latin-300.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      src: url('/fonts/roboto-v50-latin-regular.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      src: url('/fonts/roboto-v50-latin-500.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      src: url('/fonts/roboto-v50-latin-700.woff2') format('woff2');
+    }
+
     @font-face {
       font-display: swap;
       font-family: 'Roboto';
@@ -37,28 +68,48 @@
       src: url('/fonts/open-sans-v44-latin-regular.woff2') format('woff2');
     }
 
+    @font-face {
+      font-display: swap;
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 600;
+      src: url('/fonts/open-sans-v44-latin-600.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 700;
+      src: url('/fonts/open-sans-v44-latin-700.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-display: swap;
+      font-family: 'Material Symbols Outlined';
+      font-style: normal;
+      font-weight: 100 700;
+      src: url('/fonts/material-symbols-outlined.woff2') format('woff2');
+    }
+
     :root {
       --color-slate-bg: #1e293b;
       --color-safety-yellow: #facc15;
+      --color-safety-yellow-dark: #eab308;
     }
 
-    /* Remove default focus outline for mouse users */
-    :focus:not(:focus-visible) {
-      outline: none;
-      box-shadow: none;
-    }
-
-    /* Style focus for keyboard users */
-    :focus-visible {
-      outline: 2px solid var(--color-safety-yellow);
-      outline-offset: 4px;
-      border-radius: 4px;
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
       background-color: var(--color-slate-bg);
+      color: white;
       margin: 0;
       font-family: "Open Sans", sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       opacity: 1 !important;
     }
 
@@ -82,14 +133,12 @@
     }
 
     @media (min-width: 640px) {
-
       .header-container {
         padding: 0 1.5rem;
       }
     }
 
     @media (min-width: 1024px) {
-
       .header-container {
         padding: 0 2rem;
       }
@@ -127,6 +176,16 @@
       object-fit: contain;
       margin-left: -4px;
       filter: brightness(1.25) contrast(1.15) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+    }
+
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      display: inline-block;
+      -webkit-font-smoothing: antialiased;
     }
 
     .hero-title {
@@ -198,7 +257,6 @@
       }
     }
 
-    /* Essential Form Styles for FCP */
     input,
     select,
     textarea {
@@ -230,6 +288,23 @@
 
     ::-webkit-scrollbar-thumb:hover {
       background: var(--color-safety-yellow);
+    }
+
+    .glass-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    :focus:not(:focus-visible) {
+      outline: none;
+      box-shadow: none;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--color-safety-yellow);
+      outline-offset: 4px;
+      border-radius: 4px;
     }
   </style>
 
