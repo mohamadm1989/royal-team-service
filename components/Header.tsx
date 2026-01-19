@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
         }`}
     >
       <div className="header-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="header-inner flex items-center justify-between h-20">
+        <div className="header-inner flex items-center justify-between h-24">
           <a href="/" className="flex items-center gap-3 cursor-pointer" onClick={(e) => { e.preventDefault(); onNavClick(); }}>
             <img
               src="/logo-transparent-final.webp"
