@@ -1,6 +1,6 @@
 import React from 'react';
 import { m } from 'framer-motion';
-import MapComponent from './MapComponent';
+const MapComponent = React.lazy(() => import('./MapComponent'));
 import Counter from './Counter';
 
 const About: React.FC = () => {
@@ -51,8 +51,10 @@ const About: React.FC = () => {
             transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="rounded-lg overflow-hidden shadow-2xl border border-slate-700 h-[280px] md:h-[450px]">
-              <MapComponent height="100%" />
+            <div className="rounded-lg overflow-hidden shadow-2xl border border-slate-700 h-[280px] md:h-[450px] bg-slate-900">
+              <React.Suspense fallback={<div className="w-full h-full animate-pulse bg-slate-800 flex items-center justify-center text-slate-500 text-xs font-bold uppercase tracking-widest">Karte wird geladen...</div>}>
+                <MapComponent height="100%" />
+              </React.Suspense>
             </div>
             <div className="absolute -bottom-6 -left-6 bg-safety-yellow text-slate-900 p-8 font-black rounded-md shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out cursor-default">
               <span className="text-4xl block"><Counter end={10} suffix="+" /></span>

@@ -24,13 +24,16 @@ const PageLoader = () => (
   </div>
 );
 
-const SectionLoader = () => (
-  <div className="w-full h-[400px] bg-slate-900 animate-pulse flex items-center justify-center border-y border-slate-800">
+const SectionLoader = ({ height = '400px' }: { height?: string }) => (
+  <div
+    className="w-full bg-slate-900 animate-pulse flex items-center justify-center border-y border-slate-800"
+    style={{ height }}
+  >
     <div className="w-8 h-8 border-2 border-slate-700 border-t-safety-yellow rounded-full animate-spin"></div>
   </div>
 );
 
-const LazyView: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const LazyView: React.FC<{ children: React.ReactNode; height?: string }> = ({ children, height }) => {
   const [isInView, setIsInView] = useState(false);
   const ref = React.useRef<HTMLDivElement>(null);
 
@@ -42,7 +45,7 @@ const LazyView: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           observer.disconnect();
         }
       },
-      { rootMargin: '200px' }
+      { rootMargin: '300px' } // Increased margin for smoother transition
     );
 
     if (ref.current) {
@@ -53,8 +56,8 @@ const LazyView: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   }, []);
 
   return (
-    <div ref={ref} className="min-h-[100px]">
-      {isInView ? <React.Suspense fallback={<SectionLoader />}>{children}</React.Suspense> : null}
+    <div ref={ref} style={{ minHeight: isInView ? 'auto' : (height || '300px') }}>
+      {isInView ? <React.Suspense fallback={<SectionLoader height={height} />}>{children}</React.Suspense> : null}
     </div>
   );
 };
@@ -124,13 +127,13 @@ const App: React.FC = () => {
                 className="flex-grow"
               >
                 <Hero onInquiryClick={navigateToInquiry} />
-                <LazyView>
+                <LazyView height="800px">
                   <Services />
                 </LazyView>
-                <LazyView>
+                <LazyView height="600px">
                   <About />
                 </LazyView>
-                <LazyView>
+                <LazyView height="500px">
                   <Process />
                 </LazyView>
                 <section className="py-24 bg-slate-bg border-y border-slate-800" id="ueber-uns">
