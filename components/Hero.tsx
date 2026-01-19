@@ -31,14 +31,14 @@ const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
             >
               <button
                 onClick={onInquiryClick}
-                className="bg-safety-yellow hover:bg-safety-yellow-dark text-slate-900 px-8 py-4 rounded-xl font-black transition-all shadow-xl flex items-center justify-center gap-2 active:scale-95"
+                className="bg-safety-yellow hover:bg-safety-yellow-dark text-slate-900 px-8 py-4 rounded-md font-black transition-all shadow-xl flex items-center justify-center gap-2 active:scale-95"
               >
                 Jetzt Angebot anfordern
                 <span className="material-symbols-outlined">arrow_forward</span>
               </button>
               <a
                 href="#leistungen"
-                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold transition-all border border-white/20 flex items-center justify-center gap-2"
+                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-md font-bold transition-all border border-white/20 flex items-center justify-center gap-2"
               >
                 Unsere Leistungen
               </a>

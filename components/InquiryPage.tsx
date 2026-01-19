@@ -228,7 +228,7 @@ const InquiryPage: React.FC = () => {
                   <m.div variants={itemVariants} className="pt-4">
                     <button
                       disabled={isSubmitting}
-                      className="w-full bg-safety-yellow hover:bg-safety-yellow-dark text-slate-900 py-5 rounded-xl font-black text-xl uppercase transition-all shadow-xl active:scale-[0.98] flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed group overflow-hidden relative"
+                      className="w-full bg-safety-yellow hover:bg-safety-yellow-dark text-slate-900 py-5 rounded-md font-black text-xl uppercase transition-all shadow-xl active:scale-[0.98] flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed group overflow-hidden relative"
                       type="submit"
                     >
                       <AnimatePresence mode="wait">

@@ -90,7 +90,7 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={onInquiryClick}
-              className="hidden md:block bg-safety-yellow hover:bg-safety-yellow-dark text-slate-900 px-4 md:px-6 py-2 md:py-2.5 rounded-xl font-bold transition-all shadow-md active:scale-95 text-xs md:text-sm uppercase"
+              className="hidden md:block bg-safety-yellow hover:bg-safety-yellow-dark text-slate-900 px-4 md:px-6 py-2 md:py-2.5 rounded-md font-bold transition-all shadow-md active:scale-95 text-xs md:text-sm uppercase"
               aria-label="Angebot anfordern - Kontaktformular öffnen"
             >
               Angebot anfordern
@@ -145,7 +145,7 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
             <a
               href="#inquiry"
               onClick={(e) => { e.preventDefault(); handleInquiryClick(); }}
-              className="bg-safety-yellow hover:bg-safety-yellow-dark text-center text-slate-900 px-6 py-3 rounded-xl font-bold transition-all shadow-md active:scale-95 text-sm uppercase mt-2"
+              className="bg-safety-yellow hover:bg-safety-yellow-dark text-center text-slate-900 px-6 py-3 rounded-md font-bold transition-all shadow-md active:scale-95 text-sm uppercase mt-2"
             >
               Angebot anfordern
             </a>
