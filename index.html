@@ -51,13 +51,25 @@
     .hero-title {
       font-family: "Roboto", sans-serif;
       font-weight: 900;
-      animation: fadeIn 0.8s ease-out forwards;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      animation: fadeInSlide 0.8s ease-out forwards;
     }
 
-    @keyframes fadeIn {
+    .hero-description {
+      font-family: "Open Sans", sans-serif;
+      color: #cbd5e1;
+      /* slate-300 */
+      font-size: 1.125rem;
+      line-height: 1.625;
+      animation: fadeInSlide 0.8s ease-out 0.2s forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeInSlide {
       from {
         opacity: 0;
-        transform: translateX(-20px);
+        transform: translateX(-30px);
       }
 
       to {

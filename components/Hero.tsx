@@ -24,19 +24,15 @@ const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
         <div className="max-w-3xl">
-          <m.div
-            initial={{ x: -50 }}
-            animate={{ x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
+          <div className="hero-content">
             <h1 className="hero-title text-4xl md:text-6xl font-black text-white leading-tight mb-6 uppercase">
               ROYAL TEAM SERVICE<br />
               <span className="text-safety-yellow">Wir schaffen Platz für Ihre Visionen!</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed font-normal">
-              Ihr zuverlässiger Partner für professionelle Entkernung, Abbruch und Schadstoffsanierung in <strong>Reutlingen, Stuttgart, Tübingen</strong> و Region – Prompt, sicher und fachgerecht.
+            <p className="hero-description text-lg md:text-xl text-slate-300 mb-10 leading-relaxed font-normal">
+              Ihr zuverlässiger Partner für professionelle Entkernung, Abbruch und Schadstoffsanierung in <strong>Reutlingen, Stuttgart, Tübingen</strong> und Region – Prompt, sicher und fachgerecht.
             </p>
-          </m.div>
+          </div>
 
           <m.div
             initial={{ opacity: 0, y: 20 }}
