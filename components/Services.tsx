@@ -39,7 +39,7 @@ const Services: React.FC = () => {
             {
               icon: "construction",
               title: "Montage und Demontage",
-              desc: "Fachgerechte Montage und Demontage von Bauteilen, Anlagen und Industrie-Komponenten."
+              desc: "Wir übernehmen den Auf- und Abbau von Konstruktionen, Maschinen, technischen Anlagen sowie Bauelementen – präzise, sicher und termingerecht."
             },
             {
               icon: "warning",
