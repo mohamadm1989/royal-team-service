@@ -206,6 +206,7 @@ const App: React.FC = () => {
         </AnimatePresence>
 
         <Footer onNavClick={navigateToHome} />
+        <SpeedInsights />
       </div>
     </LazyMotion>
   );
