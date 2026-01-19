@@ -19,15 +19,29 @@ export default defineConfig(({ mode }) => {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
     },
     build: {
+      modulePreload: {
+        polyfill: false // Disable module preload polyfill to save space
+      },
       rollupOptions: {
         output: {
-          manualChunks: {
-            'vendor-react': ['react', 'react-dom'],
-            'vendor-framer': ['framer-motion'],
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              if (id.includes('react')) return 'vendor-react';
+              if (id.includes('framer-motion')) return 'vendor-framer';
+              return 'vendor-libs';
+            }
           },
         },
       },
-      chunkSizeWarningLimit: 600,
+      chunkSizeWarningLimit: 1000,
+      cssCodeSplit: true,
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true,
+        },
+      },
     },
     resolve: {
       alias: {
