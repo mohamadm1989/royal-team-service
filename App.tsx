@@ -5,7 +5,10 @@ import Hero from './components/Hero';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import { LazyMotion, domAnimation, m, AnimatePresence } from 'framer-motion';
+import { LazyMotion, m, AnimatePresence } from 'framer-motion';
+
+// Dynamically load Framer Motion features
+const loadFeatures = () => import('./framer-features').then(res => res.default);
 
 // Lazy load non-critical components
 const InquiryPage = React.lazy(() => import('./components/InquiryPage'));
@@ -108,7 +111,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <LazyMotion features={domAnimation}>
+    <LazyMotion features={loadFeatures}>
       <div className="antialiased bg-slate-bg text-white font-sans flex flex-col min-h-screen">
         <Header
           onInquiryClick={navigateToInquiry}
@@ -151,7 +154,7 @@ const App: React.FC = () => {
                       className="bg-slate-800/50 p-8 md:p-12 border-l-4 border-safety-yellow rounded-r shadow-2xl"
                     >
                       <p className="text-xl text-slate-200 leading-relaxed font-light mb-6">
-                        Qualität, Zuverlässigkeit und technische Präzision sind die Grundpfeiler unserer Arbeit. ROYAL SERVICE steht für höchste Professionalität bei jedem Projekt – egal ob klein oder großflächig.
+                        Qualität, Zuverlässigkeit und technische Präزision sind die Grundpfeiler unserer Arbeit. ROYAL SERVICE steht für höchste Professionalität bei jedem Projekt – egal ob klein oder großflächig.
                       </p>
                       <p className="text-slate-400 leading-relaxed">
                         Wir legen besonderen Wert auf die strikte Einhaltung aller gesetzlichen und technischen Vorschriften in Deutschland. Unser Team ist umfassend geschult, um auch schwierigste Schadstoffsanierungen sicher und rechtskonform durchzuführen.
@@ -209,6 +212,7 @@ const App: React.FC = () => {
         </AnimatePresence>
 
         <Footer onNavClick={navigateToHome} />
+        <BackToTop />
         <SpeedInsights />
       </div>
     </LazyMotion>

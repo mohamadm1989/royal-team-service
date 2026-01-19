@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Logo from './Logo';
 
 interface HeaderProps {
@@ -86,7 +86,7 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
           </nav>
 
           <div className="button-group flex items-center gap-4">
-            <motion.button
+            <m.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={onInquiryClick}
@@ -94,7 +94,7 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
               aria-label="Angebot anfordern - Kontaktformular öffnen"
             >
               Angebot anfordern
-            </motion.button>
+            </m.button>
 
             {/* Mobile Menu Button */}
             <button
