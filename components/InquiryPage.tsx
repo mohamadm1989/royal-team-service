@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { m, AnimatePresence } from 'framer-motion';
 import Toast from './Toast';
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser'; // Removed for performance optimization
 
 // Lazy load MapComponent
 const MapComponent = React.lazy(() => import('./MapComponent'));
@@ -73,6 +73,9 @@ const InquiryPage: React.FC = () => {
       if (!serviceId || !templateId || !publicKey) {
         throw new Error('EmailJS ist nicht konfiguriert. Bitte Umgebungsvariablen überprüfen.');
       }
+
+      // Send email using EmailJS dynamically
+      const emailjs = (await import('@emailjs/browser')).default;
 
       await emailjs.send(
         serviceId,
