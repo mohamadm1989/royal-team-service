@@ -1,9 +1,17 @@
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import MapComponent from './MapComponent';
+import { m, AnimatePresence } from 'framer-motion';
 import Toast from './Toast';
 import emailjs from '@emailjs/browser';
+
+// Lazy load MapComponent
+const MapComponent = React.lazy(() => import('./MapComponent'));
+
+const MapLoader = () => (
+  <div className="h-[250px] w-full bg-slate-800 animate-pulse rounded-2xl flex items-center justify-center border border-slate-700">
+    <span className="text-slate-500 uppercase tracking-widest text-xs font-bold">Karte wird geladen...</span>
+  </div>
+);
 
 const InquiryPage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -118,34 +126,34 @@ const InquiryPage: React.FC = () => {
       )}
 
       <main className="flex-grow">
-        <motion.section
+        <m.section
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="bg-slate-900 pt-32 pb-16 border-b border-slate-800 relative overflow-hidden"
         >
           <div className="absolute top-0 right-0 w-64 h-64 bg-safety-yellow/5 rounded-full blur-3xl -mr-32 -mt-32 animate-pulse-slow"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <motion.h1
+            <m.h1
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               className="text-4xl md:text-5xl font-black text-white uppercase mb-4 tracking-tight"
             >
               Projektanfrage stellen
-            </motion.h1>
-            <motion.p
+            </m.h1>
+            <m.p
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.1 }}
               className="text-xl text-slate-400 max-w-2xl"
             >
               Erzählen Sie uns von Ihrem Vorhaben. Wir erstellen Ihnen ein unverbindliches Angebot.
-            </motion.p>
+            </m.p>
           </div>
-        </motion.section>
+        </m.section>
 
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
+            <m.div
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -155,7 +163,7 @@ const InquiryPage: React.FC = () => {
                 <form onSubmit={handleSubmit} className="space-y-8 bg-slate-800/30 p-8 md:p-10 rounded-3xl border border-slate-800 shadow-xl backdrop-blur-sm">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Kontaktdaten */}
-                    <motion.div variants={itemVariants} className="space-y-6">
+                    <m.div variants={itemVariants} className="space-y-6">
                       <h3 className="text-lg font-bold flex items-center gap-2 text-safety-yellow uppercase mb-2">
                         <span className="material-symbols-outlined">person</span> Kontaktdaten
                       </h3>
@@ -175,10 +183,10 @@ const InquiryPage: React.FC = () => {
                         <label className="block text-sm font-semibold text-slate-300 mb-1.5 uppercase tracking-wider group-focus-within:text-safety-yellow transition-colors" htmlFor="phone">Telefonnummer *</label>
                         <input className="w-full" id="phone" name="phone" placeholder="+49 123 456789" required type="tel" />
                       </div>
-                    </motion.div>
+                    </m.div>
 
                     {/* Projektdetails */}
-                    <motion.div variants={itemVariants} className="space-y-6">
+                    <m.div variants={itemVariants} className="space-y-6">
                       <h3 className="text-lg font-bold flex items-center gap-2 text-safety-yellow uppercase mb-2">
                         <span className="material-symbols-outlined">assignment</span> Projektdetails
                       </h3>
@@ -202,10 +210,10 @@ const InquiryPage: React.FC = () => {
                         <label className="block text-sm font-semibold text-slate-300 mb-1.5 uppercase tracking-wider group-focus-within:text-safety-yellow transition-colors" htmlFor="description">Projektbeschreibung</label>
                         <textarea className="w-full" id="description" name="description" placeholder="Details zum Projekt, Größe (qm) und Standort..." rows={5}></textarea>
                       </div>
-                    </motion.div>
+                    </m.div>
                   </div>
 
-                  <motion.div variants={itemVariants} className="mt-8">
+                  <m.div variants={itemVariants} className="mt-8">
                     <label className="block text-sm font-semibold text-slate-300 mb-3 uppercase tracking-wider">Pläne oder Fotos hochladen (Optional)</label>
                     <div className="border-2 border-dashed border-slate-700 rounded-2xl p-10 text-center hover:border-safety-yellow/50 hover:bg-safety-yellow/5 transition-all group cursor-pointer relative overflow-hidden">
                       <div className="relative z-10">
@@ -215,9 +223,9 @@ const InquiryPage: React.FC = () => {
                       </div>
                       <input className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" multiple type="file" />
                     </div>
-                  </motion.div>
+                  </m.div>
 
-                  <motion.div variants={itemVariants} className="pt-4">
+                  <m.div variants={itemVariants} className="pt-4">
                     <button
                       disabled={isSubmitting}
                       className="w-full bg-safety-yellow hover:bg-safety-yellow-dark text-slate-900 py-5 rounded-2xl font-black text-xl uppercase transition-all shadow-xl active:scale-[0.98] flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed group overflow-hidden relative"
@@ -225,7 +233,7 @@ const InquiryPage: React.FC = () => {
                     >
                       <AnimatePresence mode="wait">
                         {isSubmitting ? (
-                          <motion.div
+                          <m.div
                             key="loading"
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -237,9 +245,9 @@ const InquiryPage: React.FC = () => {
                               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                             </svg>
                             Wird gesendet...
-                          </motion.div>
+                          </m.div>
                         ) : (
-                          <motion.div
+                          <m.div
                             key="submit"
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -248,19 +256,19 @@ const InquiryPage: React.FC = () => {
                           >
                             Anfrage absenden
                             <span className="material-symbols-outlined font-bold group-hover:translate-x-1 transition-transform">send</span>
-                          </motion.div>
+                          </m.div>
                         )}
                       </AnimatePresence>
                     </button>
                     <p className="text-center text-xs text-slate-500 mt-6 uppercase tracking-wider">
                       Sichere SSL-Verschlüsselung &middot; Datenschutz garantiert
                     </p>
-                  </motion.div>
+                  </m.div>
                 </form>
               </div>
 
               {/* Sidebar Contact Info */}
-              <motion.div variants={itemVariants} className="space-y-8">
+              <m.div variants={itemVariants} className="space-y-8">
                 <div className="bg-slate-900/80 backdrop-blur-md p-8 rounded-3xl border border-slate-800 sticky top-28 shadow-2xl">
                   <h4 className="text-xl font-bold mb-8 text-white uppercase tracking-tight border-b border-slate-800 pb-4">Direkter Kontakt</h4>
                   <div className="space-y-8 mb-10">
@@ -297,7 +305,9 @@ const InquiryPage: React.FC = () => {
 
                   <div className="pt-8 border-t border-slate-800">
                     <h5 className="text-sm font-bold text-white mb-4 uppercase tracking-wider">Standort auf der Karte</h5>
-                    <MapComponent />
+                    <React.Suspense fallback={<MapLoader />}>
+                      <MapComponent />
+                    </React.Suspense>
                     <p className="text-xs text-slate-500 mt-2 uppercase tracking-wider">
                       📍 Interaktive Karte - Zoom & Navigation möglich
                     </p>
@@ -313,8 +323,8 @@ const InquiryPage: React.FC = () => {
                     </p>
                   </div>
                 </div>
-              </motion.div>
-            </motion.div>
+              </m.div>
+            </m.div>
           </div>
         </section>
       </main>

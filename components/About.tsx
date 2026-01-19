@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import MapComponent from './MapComponent';
 import Counter from './Counter';
 
@@ -10,7 +9,7 @@ const About: React.FC = () => {
     <section className="py-24 bg-slate-bg overflow-hidden" id="warum-wir">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -28,7 +27,7 @@ const About: React.FC = () => {
                 { icon: "payments", title: "Faire Konditionen", text: "Transparente Preisgestaltung ohne Überraschungen." },
                 { icon: "gavel", title: "Zertifizierte Sicherheit", text: "Strikte Einhaltung aller Schutzvorschriften." }
               ].map((item, i) => (
-                <motion.div
+                <m.div
                   key={i}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -41,11 +40,11 @@ const About: React.FC = () => {
                     <h5 className="font-bold text-white uppercase text-sm mb-1">{item.title}</h5>
                     <p className="text-slate-400 text-xs">{item.text}</p>
                   </div>
-                </motion.div>
+                </m.div>
               ))}
             </div>
-          </motion.div>
-          <motion.div
+          </m.div>
+          <m.div
             initial={{ opacity: 0, scale: 0.9, x: 30 }}
             whileInView={{ opacity: 1, scale: 1, x: 0 }}
             viewport={{ once: true }}
@@ -59,7 +58,7 @@ const About: React.FC = () => {
               <span className="text-4xl block"><Counter end={10} suffix="+" /></span>
               <span className="uppercase text-xs tracking-tighter">Jahre Erfahrung</span>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

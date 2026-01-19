@@ -17,8 +17,8 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
                   src="/logo-transparent-final.webp"
                   alt="Royal Team Service - Ihr Partner für Abbruch und Entkernung in Baden-Württemberg"
                   className="h-20 w-auto object-contain brightness-125 contrast-115 drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]"
-                  width="168"
-                  height="67"
+                  width="200"
+                  height="80"
                 />
               </div>
               <p className="text-slate-500 text-sm leading-relaxed">

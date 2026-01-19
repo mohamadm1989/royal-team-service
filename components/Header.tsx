@@ -44,8 +44,8 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
               src="/logo-transparent-final.webp"
               alt="Royal Team Service - Entkernung, Abbruch und Schadstoffsanierung in Reutlingen & Stuttgart"
               className="h-24 w-auto object-contain brightness-125 contrast-115 drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]"
-              width="200"
-              height="80"
+              width="240"
+              height="96"
             />
           </div>
 

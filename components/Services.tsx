@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const Services: React.FC = () => {
   return (
@@ -11,7 +10,7 @@ const Services: React.FC = () => {
           <h3 className="text-4xl font-black text-white mb-4 uppercase">Unsere Expertise am Bau</h3>
           <div className="h-1 w-20 bg-safety-yellow mx-auto"></div>
         </div>
-        <motion.div
+        <m.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
@@ -63,7 +62,7 @@ const Services: React.FC = () => {
               desc: "Ökologische Trennung und fachgerechte Entsorgung aller anfallenden Materialien nach gesetzlichen Richtlinien."
             }
           ].map((service, index) => (
-            <motion.div
+            <m.div
               key={index}
               variants={{
                 hidden: { opacity: 0, y: 30 },
@@ -77,9 +76,9 @@ const Services: React.FC = () => {
               </div>
               <h4 className="text-xl font-bold mb-3 text-slate-900">{service.title}</h4>
               <p className="text-slate-800 text-sm leading-relaxed font-medium" dangerouslySetInnerHTML={{ __html: service.desc }} />
-            </motion.div>
+            </m.div>
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

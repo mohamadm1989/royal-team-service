@@ -6,21 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="/favicon-final-v3.png" />
 
-  <!-- Preconnect to external origins -->
+  <!-- Preconnect and Preload for Performance -->
   <link rel="preconnect" href="https://esm.sh">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Preload critical fonts -->
   <link rel="preload" href="/fonts/roboto-v50-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/open-sans-v44-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/roboto-v50-latin-700.woff2" as="font" type="font/woff2" crossorigin>
 
-  <!-- Meta Tags for SEO & Social Media sharing -->
+  <!-- Meta Tags for SEO & Social Media -->
   <title>ROYAL TEAM SERVICE | Entkernung, Abbruch & Schadstoffsanierung</title>
   <meta name="description"
     content="ROYAL TEAM SERVICE - Ihr Fachbetrieb für professionelle Entkernung, Abbruch und Schadstoffsanierung in Reutlingen, Stuttgart und Umgebung. Fachgerecht, sicher & termingerecht." />
   <meta name="keywords"
     content="Entkernung Reutlingen, Abbruch Stuttgart, Schadstoffsanierung, Asbest Sanierung, Entrümpelung, Royal Team Service" />
+  <meta name="author" content="ROYAL TEAM SERVICE" />
+  <meta name="robots" content="index, follow" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
@@ -35,15 +37,31 @@
   <meta property="twitter:url" content="https://royal-team-service.vercel.app/" />
   <meta property="twitter:title" content="ROYAL TEAM SERVICE | Profi für Abbruch & Entkernung" />
   <meta property="twitter:description"
-    content="Fachgerechte Entkernung und Abbrucharbeiten in Baden-Württemberg. Jetzt kostenloses Angebot anfordern!" />
+    content="Fachgerechte Entkernung und Abbrucharbeiten in Baden-Württemberg. Jetzt kostenلوزes Angebot anfordern!" />
   <meta property="twitter:image" content="https://royal-team-service.vercel.app/logo-transparent-final.png" />
 
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://esm.sh;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src 'self' data:;
+      img-src 'self' data: https: blob:;
+      connect-src 'self' https://esm.sh https://generativelanguage.googleapis.com;
+      frame-src 'self';
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self';
+      upgrade-insecure-requests;
+    " />
+
+  <!-- Unified Structured Data (JSON-LD) -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "ROYAL TEAM SERVICE",
-      "image": "https://royal-team-service.vercel.app/logo-transparent-final.png",
+      "image": "https://royal-team-service.vercel.app/hero-bg-final.webp",
       "@id": "https://royal-team-service.vercel.app",
       "url": "https://royal-team-service.vercel.app",
       "telephone": "+4916094854768",
@@ -61,123 +79,32 @@
       },
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         "opens": "07:00",
         "closes": "18:00"
       },
-      "sameAs": []
+      "description": "Ihr zuverlässiger Partner für professionelle Entkernung, Abbruch, Schadstoffsanierung and Entsorgungsmanagement in Reutlingen, Stuttgart und Umgebung.",
+      "areaServed": ["Reutlingen", "Stuttgart", "Tübingen", "Metzingen", "Böblingen", "Esslingen"]
     }
   </script>
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "ROYAL TEAM SERVICE",
-      "description": "Professionelle Entkernung, Abbruch, Schadstoffsanierung und Entsorgung in Reutlingen, Stuttgart und Umgebung.",
-      "services": [
-        "Entkernung",
-        "Abbrucharbeiten",
-        "Montage und Demontage",
-        "Schadstoffsanierung (Asbest)",
-        "Entrümpelung",
-        "Reinigungsarbeiten",
-        "Entsorgungsmanagement"
-      ],
-      "areaServed": [
-        "Reutlingen",
-        "Stuttgart",
-        "Tübingen",
-        "Metzingen",
-        "Böblingen",
-        "Esslingen"
-      ]
-    }
-  </script>
-
-  <!-- Content Security Policy for enhanced security -->
-  <meta http-equiv="Content-Security-Policy" content="
-      default-src 'self';
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://esm.sh;
-      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-      font-src 'self' data:;
-      img-src 'self' data: https: blob:;
-      connect-src 'self' https://esm.sh https://generativelanguage.googleapis.com;
-      frame-src 'self';
-      object-src 'none';
-      base-uri 'self';
-      form-action 'self';
-      upgrade-insecure-requests;
-    " />
-
-  <!-- Structured Data (JSON-LD) for Google -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "ROYAL SERVICE",
-      "image": "https://royal-team-service.vercel.app/hero-bg-final.webp",
-      "@id": "https://royal-team-service.vercel.app",
-      "url": "https://royal-team-service.vercel.app",
-      "telephone": "+49 160 94854768",
-      "email": "royal.team.service25@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Hansenstraße 20",
-        "addressLocality": "Reutlingen-Ohmenhausen",
-        "postalCode": "72770",
-        "addressCountry": "DE"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 48.5230,
-        "longitude": 9.2280
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "08:00",
-        "closes": "18:00"
-      },
-      "sameAs": [],
-      "priceRange": "€€",
-      "description": "ROYAL SERVICE ist Ihr professioneller Partner für Entkernung, Abbruch, Schadstoffsanierung und Entsorgungsmanagement in Deutschland und Europa. Wir bieten höchste Qualität, Zuverlässigkeit und technische Präزision.",
-      "areaServed": {
-        "@type": "Country",
-        "name": "Deutschland"
-      },
-      "serviceType": ["Entkernung", "Abbruch", "Schadstoffsanierung", "Asbest-Sanierung", "Entsorgungsmanagement"]
-    }
-    </script>
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://royal-team-service.vercel.app/" />
 
-  <link rel="stylesheet" href="/index.css">
+  <!-- Import Map -->
   <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^18.0.0/",
-    "react/": "https://esm.sh/react@^18.0.0/",
-    "react": "https://esm.sh/react@^18.0.0",
-    "framer-motion": "https://esm.sh/framer-motion@11.0.0",
-    "@google/genai": "https://esm.sh/@google/genai@^1.37.0"
+  {
+    "imports": {
+      "react-dom/": "https://esm.sh/react-dom@^18.0.0/",
+      "react/": "https://esm.sh/react@^18.0.0/",
+      "react": "https://esm.sh/react@^18.0.0",
+      "framer-motion": "https://esm.sh/framer-motion@11.0.0",
+      "@google/genai": "https://esm.sh/@google/genai@^1.37.0"
+    }
   }
-}
-</script>
+  </script>
+
+  <link rel="stylesheet" href="/index.css">
 
 </head>
 

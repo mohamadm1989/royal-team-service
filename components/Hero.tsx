@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 interface HeroProps {
   onInquiryClick: () => void;
@@ -25,7 +24,7 @@ const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
         <div className="max-w-3xl">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -37,9 +36,9 @@ const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
             <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed font-normal">
               Ihr zuverlässiger Partner für professionelle Entkernung, Abbruch und Schadstoffsanierung in <strong>Reutlingen, Stuttgart, Tübingen</strong> و Region – Prompt, sicher und fachgerecht.
             </p>
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -58,7 +57,7 @@ const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
             >
               Unsere Leistungen
             </a>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>
