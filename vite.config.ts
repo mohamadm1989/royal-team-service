@@ -25,8 +25,8 @@ export default defineConfig(({ mode }) => {
               delete context.bundle[fileName];
             }
           }
-          // Remove any existing link rel="stylesheet" tags that might have been injected
-          html = html.replace(/<link rel="stylesheet" href="\/assets\/[^>]+>/g, '');
+          // Remove any existing link tags that point to CSS files to prevent 404s
+          html = html.replace(/<link[^>]*?href="[^"]*?\.css"[^>]*?>/gi, '');
           return html.replace('</head>', `${cssInlined}</head>`);
         }
       }
