@@ -159,8 +159,8 @@ input[type="date"] {
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-  /* Cleaner filter for yellow icon */
-  filter: invert(80%) sepia(50%) saturate(3000%) hue-rotate(10deg) brightness(100%) contrast(100%);
+  /* Precise filter for Safety Yellow (#facc15) */
+  filter: invert(82%) sepia(90%) saturate(3000%) hue-rotate(3deg) brightness(105%) contrast(101%);
   cursor: pointer;
   position: absolute;
   right: 1rem;
