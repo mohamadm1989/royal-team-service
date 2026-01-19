@@ -21,28 +21,29 @@ const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
             <p className="hero-description text-lg md:text-xl text-slate-300 mb-10 leading-relaxed font-normal">
               Ihr zuverlässiger Partner für professionelle Entkernung, Abbruch und Schadstoffsanierung in <strong>Reutlingen, Stuttgart, Tübingen</strong> und Region – Prompt, sicher und fachgerecht.
             </p>
-          </div>
 
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4"
-          >
-            <button
-              onClick={onInquiryClick}
-              className="bg-safety-yellow hover:bg-safety-yellow-dark text-slate-900 px-8 py-4 rounded-xl font-black transition-all shadow-xl flex items-center justify-center gap-2 active:scale-95"
+
+            <m.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-4"
             >
-              Jetzt Angebot anfordern
-              <span className="material-symbols-outlined">arrow_forward</span>
-            </button>
-            <a
-              href="#leistungen"
-              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold transition-all border border-white/20 flex items-center justify-center gap-2"
-            >
-              Unsere Leistungen
-            </a>
-          </m.div>
+              <button
+                onClick={onInquiryClick}
+                className="bg-safety-yellow hover:bg-safety-yellow-dark text-slate-900 px-8 py-4 rounded-xl font-black transition-all shadow-xl flex items-center justify-center gap-2 active:scale-95"
+              >
+                Jetzt Angebot anfordern
+                <span className="material-symbols-outlined">arrow_forward</span>
+              </button>
+              <a
+                href="#leistungen"
+                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold transition-all border border-white/20 flex items-center justify-center gap-2"
+              >
+                Unsere Leistungen
+              </a>
+            </m.div>
+          </div>
         </div>
       </div>
     </section>
