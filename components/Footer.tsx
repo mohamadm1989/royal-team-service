@@ -60,12 +60,12 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
             </ul>
           </div>
         </div>
-        <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 font-medium">
+        <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-300 font-medium">
           <p>© 2026 ROYAL TEAM SERVICE. Alle Rechte vorbehalten.</p>
           <div className="flex gap-6 uppercase">
-            <a href="#impressum" className="hover:text-safety-yellow" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Impressum</a>
-            <a href="#datenschutz" className="hover:text-safety-yellow" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Datenschutz</a>
-            <a href="#agb" className="hover:text-safety-yellow" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>AGB</a>
+            <a href="#impressum" className="text-slate-300 hover:text-safety-yellow transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Impressum</a>
+            <a href="#datenschutz" className="text-slate-300 hover:text-safety-yellow transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Datenschutz</a>
+            <a href="#agb" className="text-slate-300 hover:text-safety-yellow transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>AGB</a>
           </div>
         </div>
       </div>

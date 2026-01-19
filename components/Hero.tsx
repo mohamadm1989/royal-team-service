@@ -29,7 +29,7 @@ const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-6 uppercase">
+            <h1 className="hero-title text-4xl md:text-6xl font-black text-white leading-tight mb-6 uppercase">
               ROYAL TEAM SERVICE<br />
               <span className="text-safety-yellow">Wir schaffen Platz für Ihre Visionen!</span>
             </h1>
