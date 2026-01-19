@@ -19,7 +19,8 @@ const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
           src={imageUrl}
           alt="Royal Team Service - Baustelle Abbrucharbeiten und Entkernung in Baden-Württemberg"
           className="w-full h-full object-cover scale-105"
-          loading="lazy"
+          loading="eager"
+          fetchPriority="high"
         />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">

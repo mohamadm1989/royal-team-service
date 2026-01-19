@@ -15,8 +15,18 @@ for img_name in images_to_convert:
     if os.path.exists(input_path):
         try:
             with Image.open(input_path) as img:
-                img.save(output_path, "WEBP", quality=85)
-            print(f"Successfully converted {img_name} to WebP.")
+                # Resize logo if it's the logo file
+                if "logo" in img_name.lower():
+                    # Resize to 200px width while maintaining aspect ratio
+                    w_percent = (200 / float(img.size[0]))
+                    h_size = int((float(img.size[1]) * float(w_percent)))
+                    img = img.resize((200, h_size), Image.Resampling.LANCZOS)
+                    print(f"Resized {img_name} to 200px width.")
+                
+                # Higher compression for Hero bg - quality 60 is usually still great for WebP
+                quality = 60 if "hero" in img_name.lower() else 75
+                img.save(output_path, "WEBP", quality=quality, method=6)
+            print(f"Successfully converted {img_name} to WebP with quality {quality}.")
         except Exception as e:
             print(f"Error converting {img_name}: {e}")
     else:
