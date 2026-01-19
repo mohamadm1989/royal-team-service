@@ -48,22 +48,75 @@
       opacity: 1 !important;
     }
 
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.3s;
+    }
+
+    .header-logo {
+      height: 96px;
+      width: 240px;
+      aspect-ratio: 240 / 96;
+      object-fit: contain;
+      filter: brightness(1.25) contrast(1.15) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+    }
+
     .hero-title {
       font-family: "Roboto", sans-serif;
       font-weight: 900;
-      line-height: 1.2;
+      font-size: 2.25rem;
+      line-height: 1.1;
       margin-bottom: 1.5rem;
+      text-transform: uppercase;
       animation: fadeInSlide 0.8s ease-out forwards;
     }
 
     .hero-description {
       font-family: "Open Sans", sans-serif;
       color: #cbd5e1;
-      /* slate-300 */
       font-size: 1.125rem;
-      line-height: 1.625;
+      line-height: 1.6;
+      max-width: 672px;
       animation: fadeInSlide 0.8s ease-out 0.2s forwards;
       opacity: 0;
+    }
+
+    .hero-section {
+      position: relative;
+      min-height: 800px;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      background-color: #0f172a;
+      overflow: hidden;
+      padding-top: 80px;
+    }
+
+    .hero-bg-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background-image: url('/hero-bg-final.webp');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.4;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 20;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      width: 100%;
     }
 
     @keyframes fadeInSlide {
@@ -75,6 +128,16 @@
       to {
         opacity: 1;
         transform: translateX(0);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .hero-title {
+        font-size: 3.75rem;
+      }
+
+      .hero-content {
+        padding: 0 2rem;
       }
     }
   </style>

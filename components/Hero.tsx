@@ -9,19 +9,8 @@ const Hero: React.FC<HeroProps> = ({ onInquiryClick }) => {
   const imageUrl = "/hero-bg-final.webp";
 
   return (
-    <section className="relative min-h-[800px] flex items-center overflow-hidden pt-20">
-      <div className="absolute inset-0 z-0">
-        {/* Subtle overlay for text readability without framing the image */}
-        <div className="absolute inset-0 bg-slate-900/40 z-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/60 to-transparent z-10"></div>
-        <img
-          src={imageUrl}
-          alt="Royal Team Service - Baustelle Abbrucharbeiten und Entkernung in Baden-Württemberg"
-          className="w-full h-full object-cover scale-105"
-          loading="eager"
-          fetchPriority="high"
-        />
-      </div>
+    <section className="hero-section" id="home">
+      <div className="hero-bg-overlay"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
         <div className="max-w-3xl">
           <div className="hero-content">
