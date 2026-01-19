@@ -37,7 +37,7 @@ const About: React.FC = () => {
                 >
                   <span className="material-symbols-outlined text-safety-yellow text-3xl">{item.icon}</span>
                   <div>
-                    <h5 className="font-bold text-white uppercase text-sm mb-1">{item.title}</h5>
+                    <h4 className="font-bold text-white uppercase text-sm mb-1">{item.title}</h4>
                     <p className="text-slate-400 text-xs">{item.text}</p>
                   </div>
                 </m.div>

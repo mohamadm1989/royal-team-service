@@ -21,13 +21,13 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
                   height="80"
                 />
               </a>
-              <p className="text-slate-500 text-sm leading-relaxed">
+              <p className="text-slate-400 text-sm leading-relaxed">
                 Ihr kompetenter Partner für Bau- und Industriedienstleistungen in Deutschland und ganz Europa.
               </p>
             </div>
           </div>
           <div>
-            <h5 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Impressum / Kontakt</h5>
+            <h2 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Impressum / Kontakt</h2>
             <ul className="space-y-4 text-sm text-slate-400">
               <li className="flex items-start gap-3">
                 <span className="material-symbols-outlined text-safety-yellow text-lg">location_on</span>
@@ -48,7 +48,7 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
             </ul>
           </div>
           <div>
-            <h5 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Leistungen Schnellzugriff</h5>
+            <h2 className="font-bold text-white mb-6 uppercase tracking-wider text-sm">Leistungen Schnellzugriff</h2>
             <ul className="space-y-2 text-sm text-slate-400">
               <li><a href="#leistungen" onClick={(e) => { e.preventDefault(); onNavClick('leistungen'); }} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Entkernung</a></li>
               <li><a href="#leistungen" onClick={(e) => { e.preventDefault(); onNavClick('leistungen'); }} className="hover:text-safety-yellow transition-colors text-left uppercase text-[10px] font-bold tracking-wider">Abbrucharbeiten</a></li>
@@ -60,7 +60,7 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
             </ul>
           </div>
         </div>
-        <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-600 font-medium">
+        <div className="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 font-medium">
           <p>© 2026 ROYAL TEAM SERVICE. Alle Rechte vorbehalten.</p>
           <div className="flex gap-6 uppercase">
             <a href="#impressum" className="hover:text-safety-yellow" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Impressum</a>

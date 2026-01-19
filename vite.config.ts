@@ -19,9 +19,7 @@ export default defineConfig(({ mode }) => {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
     },
     build: {
-      modulePreload: {
-        polyfill: false // Disable module preload polyfill to save space
-      },
+      modulePreload: false, // Truly disable module preloading to declutter the critical path
       rollupOptions: {
         output: {
           manualChunks(id) {
