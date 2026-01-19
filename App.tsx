@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { LazyMotion, domAnimation, m, AnimatePresence } from 'framer-motion';
 
 // Lazy load non-critical components
