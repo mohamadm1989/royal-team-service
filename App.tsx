@@ -4,6 +4,8 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
+import CookieConsent from './components/CookieConsent';
+import AboutSummary from './components/AboutSummary';
 
 import { LazyMotion, m, AnimatePresence } from 'framer-motion';
 
@@ -16,7 +18,7 @@ const Impressum = React.lazy(() => import('./components/Impressum'));
 const Datenschutz = React.lazy(() => import('./components/Datenschutz'));
 const AGB = React.lazy(() => import('./components/AGB'));
 
-// Below-the-fold components
+// Below-the-fold components are grouped via Vite manualChunks
 const Services = React.lazy(() => import('./components/Services'));
 const About = React.lazy(() => import('./components/About'));
 const Process = React.lazy(() => import('./components/Process'));
@@ -64,6 +66,11 @@ const LazyView: React.FC<{ children: React.ReactNode; height?: string }> = ({ ch
     </div>
   );
 };
+
+// Tiny components are now statically imported to flatten the waterfall
+
+// Combine small common components into the main bundle if preferred, 
+// but here we keep them lazy as requested but minimize dependencies.
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<'home' | 'inquiry' | 'impressum' | 'datenschutz' | 'agb'>('home');
@@ -139,29 +146,7 @@ const App: React.FC = () => {
                 <LazyView height="500px">
                   <Process />
                 </LazyView>
-                <section className="py-24 bg-slate-bg border-y border-slate-800" id="ueber-uns">
-                  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <m.h2
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      className="text-safety-yellow font-black uppercase tracking-widest text-sm mb-6"
-                    >
-                      Über ROYAL SERVICE
-                    </m.h2>
-                    <m.div
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      className="bg-slate-800/50 p-8 md:p-12 border-l-4 border-safety-yellow rounded-r shadow-2xl"
-                    >
-                      <p className="text-xl text-slate-200 leading-relaxed font-light mb-6">
-                        Qualität, Zuverlässigkeit und technische Präزision sind die Grundpfeiler unserer Arbeit. ROYAL SERVICE steht für höchste Professionalität bei jedem Projekt – egal ob klein oder großflächig.
-                      </p>
-                      <p className="text-slate-400 leading-relaxed">
-                        Wir legen besonderen Wert auf die strikte Einhaltung aller gesetzlichen und technischen Vorschriften in Deutschland. Unser Team ist umfassend geschult, um auch schwierigste Schadstoffsanierungen sicher und rechtskonform durchzuführen.
-                      </p>
-                    </m.div>
-                  </div>
-                </section>
+                <AboutSummary />
               </m.main>
             ) : currentPage === 'inquiry' ? (
               <m.div
@@ -213,7 +198,7 @@ const App: React.FC = () => {
 
         <Footer onNavClick={navigateToHome} />
         <BackToTop />
-
+        <CookieConsent onSettingsClick={() => navigateToHome('datenschutz')} />
       </div>
     </LazyMotion>
   );

@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { m } from 'framer-motion';
-import Logo from './Logo';
+import BrandLogo from './BrandLogo';
 
 interface HeaderProps {
   onInquiryClick: () => void;
@@ -39,15 +39,10 @@ const Header: React.FC<HeaderProps> = ({ onInquiryClick, onNavClick }) => {
     >
       <div className="header-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="header-inner flex items-center justify-between h-24">
-          <a href="/" className="flex items-center gap-3 cursor-pointer" onClick={(e) => { e.preventDefault(); onNavClick(); }}>
-            <img
-              src="/logo-transparent-final.webp"
-              alt="Royal Team Service - Entkernung, Abbruch und Schadstoffsanierung in Reutlingen & Stuttgart"
-              className="header-logo brightness-125 contrast-115 drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]"
-              width="240"
-              height="96"
-            />
-          </a>
+          <BrandLogo
+            onNavClick={() => onNavClick()}
+            className="-mt-2"
+          />
 
           {/* Desktop Navigation */}
           <nav className="nav-desktop hidden lg:flex items-center gap-8" role="navigation" aria-label="Main navigation">

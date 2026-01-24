@@ -3,7 +3,7 @@ import os
 
 images_to_convert = [
     "hero-bg-final.png",
-    "logo-transparent-final.png"
+    "logo-new.png"
 ]
 
 public_dir = r"c:\Users\Mohamad\Downloads\royal-team-service\public"

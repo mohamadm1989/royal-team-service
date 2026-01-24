@@ -1,5 +1,6 @@
 
 import React from 'react';
+import BrandLogo from './BrandLogo';
 
 interface FooterProps {
   onNavClick: (anchor?: string) => void;
@@ -12,15 +13,9 @@ const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           <div className="space-y-6">
             <div className="flex flex-col gap-4">
-              <a href="/" className="flex items-center gap-3 cursor-pointer" onClick={(e) => { e.preventDefault(); onNavClick(); }}>
-                <img
-                  src="/logo-transparent-final.webp"
-                  alt="Royal Team Service - Ihr Partner für Abbruch und Entkernung in Baden-Württemberg"
-                  className="h-20 w-auto object-contain brightness-125 contrast-115 drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]"
-                  width="200"
-                  height="80"
-                />
-              </a>
+              <BrandLogo
+                onNavClick={() => onNavClick()}
+              />
               <p className="text-slate-400 text-sm leading-relaxed">
                 Ihr Experte für Abbruch & Entkernung in der Region – Sicher. Sauber. Termingerecht. Deutschlandweit und Europaweit ihr Partner vor anspruchsvolle Projekte.
               </p>
