@@ -58,7 +58,7 @@ const InquirySidebar: React.FC = () => {
                     <span className="material-symbols-outlined">map</span> Einsatzgebiete
                 </h3>
                 <p className="text-sm text-slate-400 leading-relaxed mb-6">
-                    Wir sind für Sie in ganz Baden-Württemberg im Einsatz, insbesondere im Raum Reutlingen, Stuttgart, Tübingen und Umgebung.
+                    Ihr Experte für Abbruch & Entkernung in der Region – Sicher. Sauber. Termingerecht. Deutschlandweit und Europaweit ihr Partner vor anspruchsvolle Projekte.
                 </p>
                 <div className="bg-slate-900 rounded-md overflow-hidden shadow-2xl">
                     <React.Suspense fallback={<MapLoader />}>
